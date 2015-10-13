@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Download</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-mask/dist/mask.js"></script>
+        <script type="text/javascript" src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+        <script type="text/javascript" src="js/download.js"></script>
+        <script type="text/javascript" src="js/stDateFilter.js"></script>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container" ng-controller="dataCtrl">
+            <h2>Admin - Download</h2>
+
+            <form class="form-inline" ng-controller="requestCtrl">
+              <div class="form-group">
+                <input class="form-control" placeholder="Study ID" ng-model="row.studyId">
+              </div>
+              <div class="form-group">
+                    <label>After:</label>
+                    <input type="text" class="form-control" ng-model="row.startDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
+              </div>
+              <div class="form-group">
+                    <label>Before:</label>
+                    <input type="text" class="form-control" ng-model="row.endDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
+              </div>
+              <div class="form-group">
+                  <select class="form-control" ng-model="row.db">
+                    <option value="test" selected>Development</option>
+                    <option value="warehouse">Production</option>
+                  </select>
+              </div>
+              <button class="btn btn-primary" ng-click="requestDownload(row)">Request</button>
+            </form>
+
+            <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped table-hover" ng-controllers="tableCtrl" st-set-filter="stCustomFilter">
+                <thead>
+                    <tr>
+                        <th st-sort="studyId">ID</th>
+                        <th st-sort="studyUrl">URL</th>
+                        <th>File Size</th>
+                        <th st-sort="creationDate">Date Added</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in displayedCollection">
+                    <td>{{row.studyId}}</td>
+                    <td><a href="{{row.studyUrl}}" download>{{row.studyUrl}}</a></td>
+                    <td><i ng-class="{'text-muted':!row.fileSize}">{{row.fileSize || "unknown" }}</i></td>
+                    <td>{{row.creationDate | date:'short'}}</td>
+                    <td ng-switch="row.studyStatus">
+                        <span ng-switch-when="R" class="label label-warning">Running</span>
+                        <span ng-switch-when="C" class="label label-success">Complete</span>
+                        <span ng-switch-when="X" class="label label-danger">Error</span>
+                    </td>
+
+<!--                     <td>
+                        <div ng-if="row.$pending" class="loader">Loading...</div>
+
+                        <div ng-if="!row.$pending">
+                            <span ng-switch="row.studyStatus">
+                                <button ng-switch-when="P" class="btn btn-success" type="button" ng-click="play(row)">
+                                    <span class="glyphicon glyphicon-play"></span>
+                                </button>
+
+                                <button ng-switch-when="R" class="btn btn-info" type="button" ng-click="pause(row)">
+                                    <span class="glyphicon glyphicon-pause"></span>
+                                </button>
+                            </span>
+
+                            <button class="btn btn-danger" type="button" ng-click="remove(row)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+
+                    </td>
+ -->                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

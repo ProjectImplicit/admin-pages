@@ -1,0 +1,1976 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"stu",
+				"studyRules"
+			],
+			[
+				"stud",
+				"studyUrl"
+			],
+			[
+				"create",
+				"creationDate"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"tak",
+				"taskId"
+			],
+			[
+				"pro",
+				"PRODUCTION_URL"
+			],
+			[
+				"err",
+				"errorMsg"
+			],
+			[
+				"task",
+				"taskStatus"
+			],
+			[
+				"cont",
+				"controller"
+			],
+			[
+				"ctr",
+				"ctrlLocals"
+			],
+			[
+				"di",
+				"dialog"
+			],
+			[
+				"dis",
+				"dismissValue"
+			],
+			[
+				"clo",
+				"closeValue"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"mod",
+				"modalInstance"
+			],
+			[
+				"sta",
+				"STATUS_PAUSED"
+			],
+			[
+				"upd",
+				"updateRow"
+			],
+			[
+				"P",
+				"STATUS_PLAYING"
+			],
+			[
+				"up",
+				"updateRow"
+			],
+			[
+				"t",
+				"tr	Tag"
+			],
+			[
+				"STA",
+				"STATUS_PAUSED"
+			],
+			[
+				"tabl",
+				"tableCtrl"
+			],
+			[
+				"row",
+				"rowCollection"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"te",
+				"templated"
+			],
+			[
+				"bas",
+				"basicNegative"
+			],
+			[
+				"all",
+				"allNegative"
+			],
+			[
+				"ad",
+				"addQuestionsSet"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"get",
+				"getUrl"
+			],
+			[
+				"cur",
+				"currentTask"
+			],
+			[
+				"cu",
+				"currentTask"
+			],
+			[
+				"che",
+				"checkboxType"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"col",
+				"col	Tag"
+			],
+			[
+				"columnS",
+				"columnStemCss"
+			],
+			[
+				"res",
+				"resume"
+			],
+			[
+				"co",
+				"column"
+			],
+			[
+				"colu",
+				"column"
+			],
+			[
+				"com",
+				"commit"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"ch",
+				"checkbox"
+			],
+			[
+				"sc",
+				"scope"
+			],
+			[
+				"test",
+				"testClass"
+			],
+			[
+				"cho",
+				"choose"
+			],
+			[
+				"deep",
+				"deepTemplate"
+			],
+			[
+				"is",
+				"isArray"
+			],
+			[
+				"ex",
+				"expect"
+			],
+			[
+				"to",
+				"toBe"
+			],
+			[
+				"reg",
+				"registerRow"
+			],
+			[
+				"sh",
+				"shuffle"
+			],
+			[
+				"gri",
+				"gridDirective"
+			],
+			[
+				"map",
+				"mapColumns"
+			],
+			[
+				"c",
+				"column"
+			],
+			[
+				"e",
+				"expect"
+			],
+			[
+				"att",
+				"attrName"
+			],
+			[
+				"pag",
+				"pagesSets"
+			],
+			[
+				"ovt",
+				"ovtsSliderOptions"
+			],
+			[
+				"ov",
+				"ovtsSliderOptions"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"iso",
+				"isolateScope"
+			],
+			[
+				"cli",
+				"clickPlace"
+			],
+			[
+				"preload",
+				"preloader"
+			],
+			[
+				"man",
+				"managerService"
+			],
+			[
+				"spy",
+				"spyOn"
+			],
+			[
+				"prel",
+				"preloader"
+			],
+			[
+				"pr",
+				"preloader"
+			],
+			[
+				"pre",
+				"preloaderDecorator"
+			],
+			[
+				"des",
+				"describe"
+			],
+			[
+				"loa",
+				"loadObj"
+			],
+			[
+				"lo",
+				"loader"
+			],
+			[
+				"load",
+				"loaders"
+			],
+			[
+				"def",
+				"defer"
+			],
+			[
+				"r",
+				"rootScope"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"pi",
+				"piPreloader"
+			],
+			[
+				"req",
+				"requiredValidator"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"in",
+				"invoke"
+			],
+			[
+				"tex",
+				"textTemplate"
+			],
+			[
+				"tem",
+				"template"
+			],
+			[
+				"inpu",
+				"inputElm"
+			],
+			[
+				"df",
+				"dfltUnits"
+			],
+			[
+				"dfl",
+				"dfltUnitsFilter"
+			],
+			[
+				"qu",
+				"questText"
+			],
+			[
+				"dir",
+				"directiveName"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"er",
+				"errorElm"
+			],
+			[
+				"for",
+				"formElm"
+			],
+			[
+				"ma",
+				"maxlengthLimit"
+			],
+			[
+				"max",
+				"maxlength"
+			],
+			[
+				"lim",
+				"limitLength"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"comp",
+				"compile"
+			],
+			[
+				"w",
+				"window"
+			],
+			[
+				"quest",
+				"questions"
+			],
+			[
+				"moad",
+				"modalCleanup"
+			],
+			[
+				"root",
+				"rootElement"
+			],
+			[
+				"b",
+				"backDrop"
+			],
+			[
+				"roo",
+				"rootElement"
+			],
+			[
+				"time",
+				"timerProceed"
+			],
+			[
+				"tim",
+				"timerProceed"
+			],
+			[
+				"mo",
+				"modalConstructor"
+			],
+			[
+				"inject",
+				"injector"
+			],
+			[
+				"sub",
+				"submitOnEnd"
+			],
+			[
+				"timele",
+				"timeLeft"
+			],
+			[
+				"and",
+				"andReturn"
+			],
+			[
+				"sp",
+				"spyOn"
+			],
+			[
+				"compile",
+				"compileProvider"
+			],
+			[
+				"su",
+				"submitOnEnd"
+			],
+			[
+				"pa",
+				"pageSetup"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"loca",
+				"localScope"
+			],
+			[
+				"tiem",
+				"timeLeft"
+			],
+			[
+				"timer",
+				"timerStopper"
+			],
+			[
+				"end",
+				"endSpy"
+			],
+			[
+				"timel",
+				"timerEl"
+			],
+			[
+				"st",
+				"stopper"
+			],
+			[
+				"timeSt",
+				"timerStop"
+			],
+			[
+				"In",
+				"INTERVAL"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"num",
+				"number"
+			],
+			[
+				"toB",
+				"toBeHidden"
+			],
+			[
+				"wra",
+				"wrapper"
+			],
+			[
+				"seq",
+				"seq"
+			],
+			[
+				"rand",
+				"randomDeepMixer"
+			],
+			[
+				"aut",
+				"autoWatch"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!doctype html>\n<html class=\"no-js\" lang=\"\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n        <title></title>\n        <meta name=\"description\" content=\"\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"apple-touch-icon\" href=\"apple-touch-icon.png\">\n\n        <link rel=\"stylesheet\" href=\"bower_components/bootstrap/dist/css/bootstrap.min.css\">\n        <link rel=\"stylesheet\" href=\"css/main.css\">\n\n        <script type=\"text/javascript\" src=\"bower_components/angular/angular.min.js\"></script>\n        <script type=\"text/javascript\" src=\"bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js\"></script>\n        <script type=\"text/javascript\" src=\"bower_components/angular-smart-table/dist/smart-table.js\"></script>\n        <script type=\"text/javascript\" src=\"js/main.js\"></script>\n        <script type=\"text/javascript\">\n        </script>\n    </head>\n    <body ng-app=\"myApp\">\n        <!--[if lt IE 9]>\n            <p class=\"browserupgrade\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n        <![endif]-->\n\n\n        <div class=\"container\" ng-controller=\"dataCtrl\">\n            <h2>Admin - running studies</h2>\n\n            <table st-table=\"displayedCollection\" st-safe-src=\"rowCollection\" class=\"table table-striped\" ng-controller=\"tableCtrl\" st-set-filter=\"stCustomFilter\">\n                <thead>\n                    <tr>\n                        <th colspan=\"3\"><input st-search=\"\" class=\"form-control\" placeholder=\"global search ...\" type=\"text\"/></th>\n                        <th colspan=\"1\">\n                            <datepicker st-before-date=\"creationDate\" ng-model=\"beforeDate\" class=\"well well-sm\" custom-class=\"getDayClass(date, mode)\"></datepicker>                       \n                        </th>\n                        <th colspan=\"1\"></th>\n                    </tr>\n                    <tr>\n                        <th>ID</th>\n                        <th>URL</th>\n                        <th>rules</th>\n                        <th>Date Added</th>\n                        <th>Actions</th>\n                    </tr>\n                </thead>\n                <tbody>\n                <tr ng-repeat=\"row in displayedCollection\">\n                    <td>{{row.studyId}}</td>\n                    <td>{{row.studyUrl}}</td>\n                    <td>{{row.studyRules}}</td>\n                    <td>{{row.creationDate | date:'short'}}</td>\n                    <td>\n                        <div ng-if=\"row.$pending\" class=\"loader\">Loading...</div>\n\n                        <div ng-if=\"!row.$pending\">\n                            <span ng-switch=\"row.studyStatus\">\n                                <button ng-switch-when=\"P\" class=\"btn btn-success\" type=\"button\" ng-click=\"play(row)\">\n                                    <span class=\"glyphicon glyphicon-play\"></span>\n                                </button>\n\n                                <button ng-switch-when=\"R\" class=\"btn btn-info\" type=\"button\" ng-click=\"pause(row)\">\n                                    <span class=\"glyphicon glyphicon-pause\"></span>\n                                </button>\n                            </span>\n\n                            <button class=\"btn btn-danger\" type=\"button\" ng-click=\"remove(row)\">\n                                <span class=\"glyphicon glyphicon-remove\"></span>\n                            </button>\n                        </div>\n\n                    </td>\n                </tr>\n                <tr ng-controller=\"addTaskCtrl\" class=\"info\">\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyId\" placeholder=\"Task ID\">\n                    </td>\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyUrl\" placeholder=\"URL\">\n                    </td>\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyRules\" placeholder=\"Rules file\" typeahead=\"rule for rule in ruleArr | filter:$viewValue\" class=\"form-control\">\n                    </td>\n                    <td class=\"text-muted\">Date</td>\n                    <td>\n                        <div ng-if=\"pending\" class=\"loader\">Loading...</div>\n                        <button ng-if=\"!pending\" class=\"btn btn-success\" type=\"button\" ng-click=\"add(row)\">\n                            <span class=\"glyphicon glyphicon-plus\"></span>\n                        </button>\n                    </td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n\n    </body>\n</html>\n",
+			"file": "index.html",
+			"file_size": 4567,
+			"file_write_time": 130803211869371129,
+			"settings":
+			{
+				"buffer_size": 4688,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower_components/angular-smart-table/dist/smart-table.js",
+			"settings":
+			{
+				"buffer_size": 40758,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 7376,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"MARKD",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"md",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Snippet: ",
+				"Snippet: for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"ma",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"sublimelin sett",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"p insa",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mark git",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"settings",
+				"Preferences: Settings - Default"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"linter user",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"debu",
+				"SublimeLinter: Disable Debug Mode"
+			],
+			[
+				"lin",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"linter set",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"diff",
+				"Git: Diff All"
+			],
+			[
+				"dif",
+				"Git: Diff All"
+			],
+			[
+				"linte",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"git diff",
+				"Git: Diff All"
+			],
+			[
+				"git re",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"diff al",
+				"Git: Diff All"
+			],
+			[
+				"git dif",
+				"Git: Diff All"
+			],
+			[
+				"git di",
+				"Git: Diff All"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git diff ",
+				"Git: Open Modified Files"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"settin",
+				"Preferences: Settings - User"
+			],
+			[
+				"sublime linter",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"pref us",
+				"Preferences: Settings - User"
+			],
+			[
+				"linter us",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"inst	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in	",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"clear",
+			"grunt",
+			"view.encoding()",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/eladzlot/public_html/admin",
+		"/home/eladzlot/public_html/admin/js"
+	],
+	"file_history":
+	[
+		"/home/eladzlot/public_html/admin/bower_components/angular-bootstrap/ui-bootstrap.js",
+		"/tmp/fz3temp-1/main.js",
+		"/tmp/fz3temp-1/index.html",
+		"/home/eladzlot/public_html/admin/css/main.css",
+		"/home/eladzlot/bin/deploy.sh",
+		"/home/eladzlot/public_html/admin/history.html",
+		"/home/eladzlot/public_html/admin/.jshintrc",
+		"/tmp/fz3temp-1/history 2.html",
+		"/home/eladzlot/public_html/admin/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+		"/home/eladzlot/public_html/admin/js/main.js",
+		"/home/eladzlot/public_html/admin/index.html",
+		"/tmp/fz3temp-1/history.html",
+		"/home/eladzlot/public_html/admin/css/normalize.css",
+		"/home/eladzlot/public_html/admin/bower.json",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/databaseModule.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/mixer/mixerModule.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/task/task-module.js",
+		"/home/eladzlot/public_html/quest/src/js/vendor.js",
+		"/home/eladzlot/public_html/quest/src/js/config.js",
+		"/home/eladzlot/public_html/quest/Gruntfile.js",
+		"/home/eladzlot/public_html/quest/src/js/APIs/APIConstructor.js",
+		"/home/eladzlot/public_html/quest/dist/js/config.js",
+		"/tmp/fz3temp-1/ratebv.js",
+		"/tmp/fz3temp-1/ratemen.js",
+		"/tmp/fz3temp-1/mgr.js",
+		"/home/eladzlot/Desktop/mgr-ampacc4.js",
+		"/tmp/fz3temp-1/ampaccneu.js",
+		"/home/eladzlot/public_html/quest/src/index.html",
+		"/home/eladzlot/public_html/quest/dist/index.html",
+		"/home/eladzlot/public_html/quest/dist/js/pibootstrap.js",
+		"/home/eladzlot/public_html/quest/dist/js/vendor.js",
+		"/home/eladzlot/public_html/quest/src/manager.jsp",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/inflateProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/sequencer.md",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/mixer/mixerSequenceProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/randomizer/randomizerProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/queryProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerModule.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerSequence.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/manager_test.js",
+		"/home/eladzlot/public_html/quest/src/example/managerScript.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/API.md",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/grid/grid.html",
+		"/home/eladzlot/public_html/test/exptmp.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/dropdown.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/selectMulti.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/selectOne.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/slider/slider.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/text/text-number.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/text/text.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/text/textarea.html",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/databaseSequenceProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/template/template_test.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateObjProvider.js",
+		"/home/eladzlot/public_html/quest/src/styles/slider.scss",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/database_test.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/databaseProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/task/questSequenceProvider.js",
+		"/home/eladzlot/public_html/quest/src/styles/_custom.scss",
+		"/home/eladzlot/.config/sublime-text-3/Packages/User/MarkdownTOC.sublime-settings",
+		"/home/eladzlot/.config/sublime-text-3/Packages/MarkdownTOC/MarkdownTOC.sublime-settings",
+		"/home/eladzlot/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/piQuest/piqPage.html",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/piQuest/piqPage-directive.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/slider/slider.js",
+		"/home/eladzlot/public_html/quest/assets/licences.txt",
+		"/home/eladzlot/public_html/quest/bower_components/angular/angular.js",
+		"/home/eladzlot/public_html/quest/src/js/pibootstrap.js",
+		"/home/eladzlot/public_html/quest/bower_components/requirejs/require.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerDirective.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/task/taskModule.js",
+		"/home/eladzlot/public_html/quest/src/quest.jsp",
+		"/home/eladzlot/public_html/quest/src/styles/main.scss",
+		"/home/eladzlot/public_html/quest/package.json",
+		"/home/eladzlot/public_html/quest/src/styles/main.css",
+		"/home/eladzlot/public_html/quest/.tmp/styles/main.css",
+		"/home/eladzlot/public_html/quest/node_modules/grunt-sass/tasks/sass.js",
+		"/home/eladzlot/public_html/quest/dist/styles/main.css",
+		"/home/eladzlot/public_html/quest/bower.json",
+		"/home/eladzlot/public_html/quest/src/.htaccess",
+		"/home/eladzlot/public_html/quest/src/js/APIs/pi/managerAPI.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/grid/gridRow.html",
+		"/home/eladzlot/public_html/quest/src/js/utils/timer/timer-module.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/timer/timerDirective.js",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_grid.scss",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_utilities.scss",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/grid/gridRowDirective.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/grid/grid_test.js",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_glyphicons.scss",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_buttons.scss",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/wrapper/wrapper.html",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_list-group.scss",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/wrapper/wrapper_test.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/grid/gridDirective.js",
+		"/home/eladzlot/public_html/test/spin.js",
+		"/home/eladzlot/public_html/quest/index.html",
+		"/home/eladzlot/public_html/quest/src/js/app.js",
+		"/home/eladzlot/public_html/quest/src/js/APIs/pi/pipAPI.js",
+		"/home/eladzlot/public_html/quest/src/js/bootstrap.js",
+		"/home/eladzlot/public_html/quest/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_buttons.scss",
+		"/tmp/fz3temp-1/emtcat.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerTaskLoadService.js",
+		"/home/eladzlot/public_html/bivalent4/bv.js",
+		"/home/eladzlot/public_html/bivalent4/bivalent4.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerGetScriptService.js",
+		"/home/eladzlot/public_html/quest/src/js/taskManager/managerService.js",
+		"/home/eladzlot/public_html/index.php",
+		"/home/eladzlot/public_html/quest/src/js/utils/helperDirectives/piSwap/piSwapDirective.js",
+		"/home/eladzlot/public_html/quest/src/example/questScript1.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectivesModule.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/questModule.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/API.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/text/text_test.js",
+		"/home/eladzlot/bin/cpdatabase.sh",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateFilter.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/questController.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectives_test.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/select_test.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/randomize/randomizeModule.js",
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/selectMixerProvider.js",
+		"/home/eladzlot/public_html/quest/src/js/utils/database/main.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"*.md",
+			"",
+			"*.md",
+			"",
+			"utils/database",
+			"",
+			"/home/lplus/public_html/pip/src/js",
+			"",
+			"/home/eladzlot/public_html/pip/src/js/extensions/iat",
+			"",
+			"/home/lplus/public_html/pip/src/js",
+			"",
+			"/home/lplus/public_html/pip/examples/dscore",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"date",
+			"tableCtrl",
+			".search",
+			"setfilterfunction",
+			"stSetFilter",
+			"task",
+			"tas",
+			"task",
+			"studyst",
+			"taskStatus",
+			"cross",
+			"url:",
+			"STATUS_REMOVED",
+			"STATUS_PLAYING",
+			".status",
+			"$modal",
+			"modal",
+			"throbber-loader",
+			"popup",
+			"btn ",
+			"browserup",
+			"mixerDefaultContext",
+			"'questions'",
+			"inflate(",
+			"inflate",
+			"shuffle",
+			"cond",
+			"changelog",
+			"change",
+			"raf",
+			"customization",
+			"$meta =",
+			"$meta",
+			"meta",
+			"branch",
+			"should call curre",
+			"mixerdefaultcontext",
+			"defaultcontext",
+			"required",
+			"Please respond to this question!",
+			"please respond to thi",
+			"deeptemplate",
+			"should templ",
+			"options",
+			"templateobj",
+			"db.sequence",
+			"slider",
+			"#slider",
+			"slider",
+			"box",
+			"ng-app",
+			"scr",
+			"ng_",
+			"appAPI",
+			"define",
+			"script'",
+			"studysession",
+			"pi-spinner",
+			"css",
+			"angular",
+			"google",
+			"maxcdn",
+			"google",
+			"gzip",
+			"lodash",
+			"underscore",
+			"require",
+			"var req",
+			"enforceDefine",
+			"requirejs",
+			"angular",
+			"require('ang",
+			"\"timer\"",
+			"optimize",
+			"setupModuleLoader",
+			"module = ",
+			"module:",
+			"t.module(\"",
+			"\"timer",
+			"timer",
+			"container",
+			"cellLabels",
+			"require: f",
+			"require =",
+			"define =",
+			"define",
+			"=",
+			"errormsg",
+			"this field is required",
+			"css",
+			"stemcss",
+			"angularinit",
+			".ready",
+			"ready",
+			"ready()",
+			"bootstrap",
+			"ng_",
+			"angular.bootstrap",
+			".module('timer",
+			".module(\"timer\"",
+			"session",
+			"choose",
+			"defa",
+			"resumeBootstrap",
+			"choose",
+			"foreach",
+			"activatePIP",
+			"'bv'",
+			"\"bv\"",
+			".bv",
+			"bv",
+			"there was an error in the task",
+			"settings",
+			"compile({",
+			"pi-manager",
+			"$sce",
+			"ng-class",
+			"# slid",
+			"invalid",
+			"require",
+			"extend",
+			"query has not been te",
+			"queryhasnotbeent",
+			"templateobj",
+			"$templated",
+			"textNumber",
+			"textnumber",
+			"maxWidth"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"studyStatus",
+			"studyUrl:",
+			"STATUS_STOPPED",
+			"STATUS_RUNNING",
+			".taskStatus",
+			"loader",
+			"btn btn-xs ",
+			"Please respond to this question",
+			"expand",
+			"PREFIX",
+			"sequential",
+			"remove",
+			"getScope",
+			"timerElement",
+			"var decorator = require('APIs/pi/APIdecorator');",
+			"var decorator = require('APIdecorator');",
+			"var api = require('APIs/APIConstructor');",
+			"manager",
+			"quest",
+			"promise['",
+			"../../bower_components",
+			" = ",
+			" : ",
+			"",
+			"databaseSequence",
+			"query",
+			"databaseModule",
+			".warn.logs",
+			"####",
+			"canvasOff",
+			"####",
+			"model.$error.required && $parent.$parent.submitAttempt",
+			"pi-quest-validation",
+			"div pi-quest-validation",
+			"div",
+			"pi-quest-validation",
+			"pi",
+			"'../bower_components/piAPI/manager/",
+			"noSkip",
+			"'",
+			"prototypeCreator",
+			"	",
+			"piConsole",
+			"suppress",
+			"	",
+			"rows",
+			"questionsMeta",
+			"pagesMeta",
+			"$logged:",
+			".$logged",
+			"$templated",
+			"",
+			"regenerateTemplate",
+			"DEBUG:false",
+			"	",
+			"questionsData",
+			"pagesData",
+			"$inflated",
+			"QuestSequence",
+			"expect_current()",
+			".next()",
+			"this.stack.length-1",
+			"\"../bower_components",
+			"../bower_components",
+			"../../bower_components",
+			"",
+			"\"",
+			"	",
+			"current",
+			"questions",
+			"/br",
+			"	",
+			"progressBar",
+			"	",
+			"mixer",
+			"%>",
+			"model",
+			"compile(",
+			"copmpile(",
+			"copmile(",
+			"	",
+			".pi-logo",
+			"	",
+			"mixerRecursive",
+			"mixerSequential",
+			"randomizeInt",
+			"randomizeRange",
+			"",
+			"questSelectOne",
+			"	",
+			"this.settingsObj",
+			"	",
+			"TaskSequence",
+			"piqPage",
+			"databaseRandomizer",
+			"databaseStore",
+			"databaseRandomizerRandomInt",
+			"databaseRandomizerRandomArr",
+			"databaseRandomizerRandomInt",
+			"proceed",
+			"	",
+			"questText",
+			"ParserProvider",
+			"piQuestPage",
+			"	",
+			"sequence",
+			"",
+			"quest-text-number",
+			"min",
+			"quest-textNumber ",
+			"	",
+			"",
+			"	",
+			"",
+			"app/js",
+			"libs",
+			"	",
+			"<%= settings",
+			"	",
+			"stimProp",
+			"stimulusProp",
+			"	",
+			"type:'inputEqualsStim',property:",
+			"inputEqualsStim',property:",
+			"inputEqualsStim",
+			"conditions",
+			"	",
+			"'inputEqualsStim',property:"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1775,
+								1775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "bower_components/angular-smart-table/dist/smart-table.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8056,
+								8056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3556.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6671,
+								6671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3084.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "admin.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"js/main.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				".js",
+				".jshintrc"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"nor",
+				"css/normalize.css"
+			],
+			[
+				"bo",
+				"bower.json"
+			],
+			[
+				"mixer",
+				"src/js/utils/database/mixer/mixerModule.js"
+			],
+			[
+				"mixermo",
+				"src/js/utils/database/mixer/mixerModule.js"
+			],
+			[
+				"databasemo",
+				"src/js/utils/database/databaseModule.js"
+			],
+			[
+				"modul",
+				"src/js/quest/task/task-module.js"
+			],
+			[
+				"database/",
+				"src/js/utils/database/databaseProvider.js"
+			],
+			[
+				"apic",
+				"src/js/APIs/APIConstructor.js"
+			],
+			[
+				"grun",
+				"Gruntfile.js"
+			],
+			[
+				"conf",
+				"src/js/config.js"
+			],
+			[
+				"man",
+				"src/manager.jsp"
+			],
+			[
+				"gru",
+				"Gruntfile.js"
+			],
+			[
+				"infl",
+				"src/js/utils/database/inflateProvider.js"
+			],
+			[
+				"seque",
+				"src/js/utils/database/sequencer.md"
+			],
+			[
+				"rando",
+				"src/js/utils/database/randomizer/randomizerProvider.js"
+			],
+			[
+				"api.md",
+				"src/js/quest/API.md"
+			],
+			[
+				"sequ",
+				"src/js/utils/database/sequencer.md"
+			],
+			[
+				"manasc",
+				"src/example/managerScript.js"
+			],
+			[
+				"mix",
+				"src/js/utils/database/mixer/mixerModule.js"
+			],
+			[
+				"manmo",
+				"src/js/taskManager/managerModule.js"
+			],
+			[
+				"manate",
+				"src/js/taskManager/manager_test.js"
+			],
+			[
+				"manse",
+				"src/js/taskManager/managerSequence.js"
+			],
+			[
+				"api",
+				"src/js/quest/API.md"
+			],
+			[
+				"dataseqmd",
+				"src/js/utils/database/sequencer.md"
+			],
+			[
+				"sequepro",
+				"src/js/utils/database/databaseSequenceProvider.js"
+			],
+			[
+				"temptest",
+				"src/js/utils/database/template/template_test.js"
+			],
+			[
+				"templateobj",
+				"src/js/utils/database/template/templateObjProvider.js"
+			],
+			[
+				"databaseseq",
+				"src/js/utils/database/databaseSequenceProvider.js"
+			],
+			[
+				"sequence",
+				"src/js/utils/database/mixer/mixerSequenceProvider.js"
+			],
+			[
+				"cus",
+				"src/styles/_custom.scss"
+			],
+			[
+				"slid",
+				"src/styles/slider.scss"
+			],
+			[
+				"api.m",
+				"src/js/quest/API.md"
+			],
+			[
+				"pagedir",
+				"src/js/quest/directives/piQuest/piqPage-directive.js"
+			],
+			[
+				"page",
+				"src/js/quest/directives/piQuest/piqPage.html"
+			],
+			[
+				"pibo",
+				"src/js/pibootstrap.js"
+			],
+			[
+				"slider",
+				"src/js/quest/directives/slider/slider.js"
+			],
+			[
+				"managerdir",
+				"src/js/taskManager/managerDirective.js"
+			],
+			[
+				"que",
+				"src/quest.jsp"
+			],
+			[
+				"manager",
+				"src/example/managerScript.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"scss",
+				"src/styles/main.scss"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"mai",
+				".tmp/styles/main.css"
+			],
+			[
+				"inde",
+				"src/index.html"
+			],
+			[
+				".htacc",
+				"src/.htaccess"
+			],
+			[
+				"con",
+				"src/js/config.js"
+			],
+			[
+				"quest.jsp",
+				"src/quest.jsp"
+			],
+			[
+				"man.jp",
+				"src/manager.jsp"
+			],
+			[
+				"mana",
+				"src/manager.jsp"
+			],
+			[
+				".jsp",
+				"src/quest.jsp"
+			],
+			[
+				"pib",
+				"src/js/pibootstrap.js"
+			],
+			[
+				"timerdir",
+				"src/js/utils/timer/timerDirective.js"
+			],
+			[
+				"piboo",
+				"src/js/pibootstrap.js"
+			],
+			[
+				"grid.",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"tim",
+				"src/js/utils/timer/timer-module.js"
+			],
+			[
+				"managerapi",
+				"src/js/APIs/pi/managerAPI.js"
+			],
+			[
+				"qu",
+				"src/quest.jsp"
+			],
+			[
+				"grid_te",
+				"src/js/quest/directives/grid/grid_test.js"
+			],
+			[
+				"cuso",
+				"src/styles/_custom.scss"
+			],
+			[
+				"grido",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"gridro",
+				"src/js/quest/directives/grid/gridRowDirective.js"
+			],
+			[
+				"cust",
+				"src/styles/_custom.scss"
+			],
+			[
+				"wra",
+				"src/js/quest/directives/wrapper/wrapper.html"
+			],
+			[
+				"wrapp",
+				"src/js/quest/directives/wrapper/wrapper.html"
+			],
+			[
+				"griddi",
+				"src/js/quest/directives/grid/gridDirective.js"
+			],
+			[
+				"gridrow",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"gri",
+				"src/js/quest/directives/grid/grid_test.js"
+			],
+			[
+				"grid",
+				"src/js/quest/directives/grid/gridDirective.js"
+			],
+			[
+				"pi",
+				"src/js/pibootstrap.js"
+			],
+			[
+				"manscr",
+				"src/example/managerScript.js"
+			],
+			[
+				"app",
+				"src/js/app.js"
+			],
+			[
+				"gir",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"manag",
+				"src/manager.jsp"
+			],
+			[
+				"row",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"confi",
+				"src/js/config.js"
+			],
+			[
+				"boo",
+				"src/js/bootstrap.js"
+			],
+			[
+				"pipa",
+				"src/js/APIs/pi/pipAPI.js"
+			],
+			[
+				"boot",
+				"src/js/bootstrap.js"
+			],
+			[
+				"_cu",
+				"src/styles/_custom.scss"
+			],
+			[
+				"grid.html",
+				"src/js/quest/directives/grid/grid.html"
+			],
+			[
+				"gridht",
+				"src/js/quest/directives/grid/grid.html"
+			],
+			[
+				"grit_",
+				"src/js/quest/directives/grid/grid_test.js"
+			],
+			[
+				"seleon",
+				"src/js/quest/directives/select/selectOne.html"
+			],
+			[
+				"pipapi",
+				"src/js/APIs/pi/pipAPI.js"
+			],
+			[
+				"managerser",
+				"src/js/taskManager/managerService.js"
+			],
+			[
+				"mangetsc",
+				"src/js/taskManager/managerGetScriptService.js"
+			],
+			[
+				"tasload",
+				"src/js/taskManager/managerTaskLoadService.js"
+			],
+			[
+				"mana_t",
+				"src/js/taskManager/manager_test.js"
+			],
+			[
+				"swap",
+				"src/js/utils/helperDirectives/piSwap/piSwapDirective.js"
+			],
+			[
+				"managersc",
+				"src/example/managerScript.js"
+			],
+			[
+				"que1",
+				"src/example/questScript1.js"
+			],
+			[
+				"questdir",
+				"src/js/quest/directives/questDirectivesModule.js"
+			],
+			[
+				"griro",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"ro",
+				"src/js/quest/directives/grid/gridRowDirective.js"
+			],
+			[
+				"text",
+				"src/js/quest/directives/text/text.html"
+			],
+			[
+				"wrap",
+				"src/js/quest/directives/wrapper/wrapper.html"
+			],
+			[
+				"griddire",
+				"src/js/quest/directives/grid/gridDirective.js"
+			],
+			[
+				"text.h",
+				"src/js/quest/directives/text/text.html"
+			],
+			[
+				"text_te",
+				"src/js/quest/directives/text/text_test.js"
+			],
+			[
+				"gridh",
+				"src/js/quest/directives/grid/grid.html"
+			],
+			[
+				"gridte",
+				"src/js/quest/directives/grid/grid_test.js"
+			],
+			[
+				"slider.h",
+				"src/js/quest/directives/slider/slider.html"
+			],
+			[
+				"api.",
+				"src/js/quest/API.md"
+			],
+			[
+				"datab.md",
+				"src/js/utils/database/sequencer.md"
+			],
+			[
+				"templ_tes",
+				"src/js/utils/database/template/template_test.js"
+			],
+			[
+				"templaob",
+				"src/js/utils/database/template/templateObjProvider.js"
+			],
+			[
+				"temp_te",
+				"src/js/utils/database/template/template_test.js"
+			],
+			[
+				"template",
+				"src/js/utils/database/template/templateFilter.js"
+			],
+			[
+				"templ",
+				"src/js/utils/database/template/templateObjProvider.js"
+			],
+			[
+				".scss",
+				"src/styles/main.scss"
+			],
+			[
+				"quecon",
+				"src/js/quest/directives/questController.js"
+			],
+			[
+				"griddir",
+				"src/js/quest/directives/grid/gridDirective.js"
+			],
+			[
+				"questcon",
+				"src/js/quest/directives/questController.js"
+			],
+			[
+				"quettest",
+				"src/js/quest/directives/questDirectives_test.js"
+			],
+			[
+				"girhtm",
+				"src/js/quest/directives/grid/gridRow.html"
+			],
+			[
+				"quedir",
+				"src/js/quest/directives/questDirectivesModule.js"
+			],
+			[
+				"selectr",
+				"src/js/quest/directives/select/selectMixerProvider.js"
+			],
+			[
+				"",
+				"src/js/quest/directives/questDirectivesModule.js"
+			],
+			[
+				"sele",
+				"src/js/quest/directives/select/select_test.js"
+			],
+			[
+				"gridtest",
+				"src/js/quest/directives/grid/grid_test.js"
+			],
+			[
+				"piqpag",
+				"src/js/quest/directives/piQuest/piqPage-directive.js"
+			],
+			[
+				"piqp",
+				"src/js/quest/directives/piQuest/piqPage.html"
+			],
+			[
+				"sele_te",
+				"src/js/quest/directives/select/select_test.js"
+			],
+			[
+				"button",
+				"src/js/quest/directives/buttons/buttons.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "qu",
+		"selected_items":
+		[
+			[
+				"qu",
+				"~/public_html/quest/quest.sublime-project"
+			],
+			[
+				"do",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"qudo",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"pip",
+				"~/public_html/pip/pip.sublime-project"
+			],
+			[
+				"q",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"que",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"doc",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"slid",
+				"~/public_html/slider/slider.sublime-project"
+			],
+			[
+				"sli",
+				"~/public_html/slider/slider.sublime-project"
+			],
+			[
+				"qud",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"questdo",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"questdoc",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"",
+				"~/public_html/quest/quest.sublime-project"
+			],
+			[
+				"slide",
+				"~/public_html/slider/slider.sublime-project"
+			],
+			[
+				"docs",
+				"~/public_html/questDocs/doc.sublime-project"
+			],
+			[
+				"/",
+				"~/public_html/quest/quest.sublime-project"
+			],
+			[
+				"pre",
+				"~/public_html/presentation/present.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 340.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
