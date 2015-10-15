@@ -137,7 +137,7 @@
                             return false;
                         } else {
                             $scope.pending = true;
-                            postAdd($scope, $scope.study)
+                            postAdd($scope.study)
                                 .then(function(response){
                                     response && response.success && $scope.$close();
                                 })
