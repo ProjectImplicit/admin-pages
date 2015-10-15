@@ -129,7 +129,7 @@
                 templateUrl: 'addPoolStudy.jst',
                 controller: function($scope){
                     $scope.ruleArr = ['/research/library/rules/Priority26.xml'];
-                    $scope.pauseArr = ['/research/library/rules/Pause26.xml.xml'];
+                    $scope.pauseArr = ['/research/library/rules/Pause26.xml'];
                     $scope.submit = function(){
                         $scope.submitted = true;
 
@@ -168,7 +168,7 @@
 
                     if (!data || data.error){
                         return piDialog({
-                            header: 'Add error!',
+                            header: 'Add study error!',
                             content: 'There was a problem retrieving the study ID, please make sure that it is set correctly in your expt file.',
                             forceCancel: true
                         });
