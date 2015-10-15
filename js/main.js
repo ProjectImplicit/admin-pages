@@ -130,6 +130,12 @@
                 controller: function($scope){
                     $scope.ruleArr = ['/research/library/rules/Priority26.xml'];
                     $scope.pauseArr = ['/research/library/rules/Pause26.xml'];
+
+                    $scope.study = {
+                        rulesUrl: $scope.ruleArr[0],
+                        pauseUrl: $scope.pauseArr[0]
+                    };
+
                     $scope.submit = function(){
                         $scope.submitted = true;
 

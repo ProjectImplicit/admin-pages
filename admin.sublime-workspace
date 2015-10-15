@@ -4,12 +4,56 @@
 		"selected_items":
 		[
 			[
-				"stu",
-				"studyRules"
+				"canc",
+				"allowCancel"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"fil",
+				"filterDeleted"
+			],
+			[
+				"reo",
+				"rowCollection"
+			],
+			[
+				"del",
+				"deletedArr"
+			],
+			[
+				"remove",
+				"removeRow"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"pa",
+				"pauseUrl"
+			],
+			[
+				"st",
+				"studyForm"
 			],
 			[
 				"stud",
 				"studyUrl"
+			],
+			[
+				"mod",
+				"modal"
+			],
+			[
+				"post",
+				"postAdd"
+			],
+			[
+				"stu",
+				"studyRules"
 			],
 			[
 				"create",
@@ -58,10 +102,6 @@
 			[
 				"op",
 				"options"
-			],
-			[
-				"mod",
-				"modalInstance"
 			],
 			[
 				"sta",
@@ -244,10 +284,6 @@
 				"ovtsSliderOptions"
 			],
 			[
-				"fun",
-				"function"
-			],
-			[
 				"iso",
 				"isolateScope"
 			],
@@ -318,10 +354,6 @@
 			[
 				"new",
 				"newValue"
-			],
-			[
-				"in",
-				"invoke"
 			],
 			[
 				"tex",
@@ -448,10 +480,6 @@
 				"submitOnEnd"
 			],
 			[
-				"pa",
-				"pageSetup"
-			],
-			[
 				"fu",
 				"function"
 			],
@@ -476,10 +504,6 @@
 				"timerEl"
 			],
 			[
-				"st",
-				"stopper"
-			],
-			[
 				"timeSt",
 				"timerStop"
 			],
@@ -490,59 +514,32 @@
 			[
 				"fo",
 				"font-weight"
-			],
-			[
-				"num",
-				"number"
-			],
-			[
-				"toB",
-				"toBeHidden"
-			],
-			[
-				"wra",
-				"wrapper"
-			],
-			[
-				"seq",
-				"seq"
-			],
-			[
-				"rand",
-				"randomDeepMixer"
-			],
-			[
-				"aut",
-				"autoWatch"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "<!doctype html>\n<html class=\"no-js\" lang=\"\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n        <title></title>\n        <meta name=\"description\" content=\"\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"apple-touch-icon\" href=\"apple-touch-icon.png\">\n\n        <link rel=\"stylesheet\" href=\"bower_components/bootstrap/dist/css/bootstrap.min.css\">\n        <link rel=\"stylesheet\" href=\"css/main.css\">\n\n        <script type=\"text/javascript\" src=\"bower_components/angular/angular.min.js\"></script>\n        <script type=\"text/javascript\" src=\"bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js\"></script>\n        <script type=\"text/javascript\" src=\"bower_components/angular-smart-table/dist/smart-table.js\"></script>\n        <script type=\"text/javascript\" src=\"js/main.js\"></script>\n        <script type=\"text/javascript\">\n        </script>\n    </head>\n    <body ng-app=\"myApp\">\n        <!--[if lt IE 9]>\n            <p class=\"browserupgrade\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n        <![endif]-->\n\n\n        <div class=\"container\" ng-controller=\"dataCtrl\">\n            <h2>Admin - running studies</h2>\n\n            <table st-table=\"displayedCollection\" st-safe-src=\"rowCollection\" class=\"table table-striped\" ng-controller=\"tableCtrl\" st-set-filter=\"stCustomFilter\">\n                <thead>\n                    <tr>\n                        <th colspan=\"3\"><input st-search=\"\" class=\"form-control\" placeholder=\"global search ...\" type=\"text\"/></th>\n                        <th colspan=\"1\">\n                            <datepicker st-before-date=\"creationDate\" ng-model=\"beforeDate\" class=\"well well-sm\" custom-class=\"getDayClass(date, mode)\"></datepicker>                       \n                        </th>\n                        <th colspan=\"1\"></th>\n                    </tr>\n                    <tr>\n                        <th>ID</th>\n                        <th>URL</th>\n                        <th>rules</th>\n                        <th>Date Added</th>\n                        <th>Actions</th>\n                    </tr>\n                </thead>\n                <tbody>\n                <tr ng-repeat=\"row in displayedCollection\">\n                    <td>{{row.studyId}}</td>\n                    <td>{{row.studyUrl}}</td>\n                    <td>{{row.studyRules}}</td>\n                    <td>{{row.creationDate | date:'short'}}</td>\n                    <td>\n                        <div ng-if=\"row.$pending\" class=\"loader\">Loading...</div>\n\n                        <div ng-if=\"!row.$pending\">\n                            <span ng-switch=\"row.studyStatus\">\n                                <button ng-switch-when=\"P\" class=\"btn btn-success\" type=\"button\" ng-click=\"play(row)\">\n                                    <span class=\"glyphicon glyphicon-play\"></span>\n                                </button>\n\n                                <button ng-switch-when=\"R\" class=\"btn btn-info\" type=\"button\" ng-click=\"pause(row)\">\n                                    <span class=\"glyphicon glyphicon-pause\"></span>\n                                </button>\n                            </span>\n\n                            <button class=\"btn btn-danger\" type=\"button\" ng-click=\"remove(row)\">\n                                <span class=\"glyphicon glyphicon-remove\"></span>\n                            </button>\n                        </div>\n\n                    </td>\n                </tr>\n                <tr ng-controller=\"addTaskCtrl\" class=\"info\">\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyId\" placeholder=\"Task ID\">\n                    </td>\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyUrl\" placeholder=\"URL\">\n                    </td>\n                    <td>\n                        <input type=\"text\" ng-model=\"row.studyRules\" placeholder=\"Rules file\" typeahead=\"rule for rule in ruleArr | filter:$viewValue\" class=\"form-control\">\n                    </td>\n                    <td class=\"text-muted\">Date</td>\n                    <td>\n                        <div ng-if=\"pending\" class=\"loader\">Loading...</div>\n                        <button ng-if=\"!pending\" class=\"btn btn-success\" type=\"button\" ng-click=\"add(row)\">\n                            <span class=\"glyphicon glyphicon-plus\"></span>\n                        </button>\n                    </td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n\n    </body>\n</html>\n",
+			"file": "download.html",
+			"settings":
+			{
+				"buffer_size": 5588,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/download.js",
+			"settings":
+			{
+				"buffer_size": 6325,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "index.html",
-			"file_size": 4567,
-			"file_write_time": 130803211869371129,
 			"settings":
 			{
-				"buffer_size": 4688,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bower_components/angular-smart-table/dist/smart-table.js",
-			"settings":
-			{
-				"buffer_size": 40758,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 7376,
+				"buffer_size": 8504,
 				"line_ending": "Unix"
 			}
 		}
@@ -777,22 +774,24 @@
 	},
 	"expanded_folders":
 	[
-		"/home/eladzlot/public_html/admin",
-		"/home/eladzlot/public_html/admin/js"
+		"/home/eladzlot/public_html/admin"
 	],
 	"file_history":
 	[
+		"/home/eladzlot/public_html/admin/css/main.css",
+		"/home/eladzlot/public_html/admin/index.html",
+		"/home/eladzlot/public_html/admin/js/main.js",
+		"/home/eladzlot/.gitconfig",
+		"/home/eladzlot/public_html/admin/templates/addPoolStudy.jst",
 		"/home/eladzlot/public_html/admin/bower_components/angular-bootstrap/ui-bootstrap.js",
+		"/home/eladzlot/public_html/admin/bower_components/angular-smart-table/dist/smart-table.js",
 		"/tmp/fz3temp-1/main.js",
 		"/tmp/fz3temp-1/index.html",
-		"/home/eladzlot/public_html/admin/css/main.css",
 		"/home/eladzlot/bin/deploy.sh",
 		"/home/eladzlot/public_html/admin/history.html",
 		"/home/eladzlot/public_html/admin/.jshintrc",
 		"/tmp/fz3temp-1/history 2.html",
 		"/home/eladzlot/public_html/admin/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
-		"/home/eladzlot/public_html/admin/js/main.js",
-		"/home/eladzlot/public_html/admin/index.html",
 		"/tmp/fz3temp-1/history.html",
 		"/home/eladzlot/public_html/admin/css/normalize.css",
 		"/home/eladzlot/public_html/admin/bower.json",
@@ -906,10 +905,7 @@
 		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateFilter.js",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/questController.js",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectives_test.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/select_test.js",
-		"/home/eladzlot/public_html/quest/src/js/utils/database/randomize/randomizeModule.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/selectMixerProvider.js",
-		"/home/eladzlot/public_html/quest/src/js/utils/database/main.js"
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/select_test.js"
 	],
 	"find":
 	{
@@ -942,6 +938,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dialog",
+			"rowcollection",
+			"deletedArr",
+			"rowcollection",
+			"modalScope",
+			"an error",
+			"$scope",
+			"mask",
+			"$modal",
+			"piDialog",
+			"ion ad",
 			"date",
 			"tableCtrl",
 			".search",
@@ -1058,18 +1065,7 @@
 			"compile({",
 			"pi-manager",
 			"$sce",
-			"ng-class",
-			"# slid",
-			"invalid",
-			"require",
-			"extend",
-			"query has not been te",
-			"queryhasnotbeent",
-			"templateobj",
-			"$templated",
-			"textNumber",
-			"textnumber",
-			"maxWidth"
+			"ng-class"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1215,24 +1211,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "download.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4688,
+						"buffer_size": 5588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1775,
-								1775
+								4277,
+								4277
 							]
 						],
 						"settings":
@@ -1242,7 +1238,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1017.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1250,49 +1246,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "bower_components/angular-smart-table/dist/smart-table.js",
+					"file": "js/download.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40758,
+						"buffer_size": 6325,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8056,
-								8056
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3556.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7376,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6671,
-								6671
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1302,10 +1268,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3084.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3071,
+								3071
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1360,12 +1356,24 @@
 		"selected_items":
 		[
 			[
-				"main",
-				"js/main.js"
+				"dow",
+				"js/download.js"
 			],
 			[
 				"ind",
 				"index.html"
+			],
+			[
+				"down",
+				"download.html"
+			],
+			[
+				"main.css",
+				"css/main.css"
+			],
+			[
+				"main",
+				"js/main.js"
 			],
 			[
 				".js",
@@ -1858,18 +1866,6 @@
 			[
 				"piqpag",
 				"src/js/quest/directives/piQuest/piqPage-directive.js"
-			],
-			[
-				"piqp",
-				"src/js/quest/directives/piQuest/piqPage.html"
-			],
-			[
-				"sele_te",
-				"src/js/quest/directives/select/select_test.js"
-			],
-			[
-				"button",
-				"src/js/quest/directives/buttons/buttons.js"
 			]
 		],
 		"width": 0.0
