@@ -136,9 +136,14 @@
                         if ($scope.studyForm.$invalid) {
                             return false;
                         } else {
-                            postAdd($scope, $scope.study).then(function(response){
-                                response.success && $scope.$close();
-                            });
+                            $scope.pending = true;
+                            postAdd($scope, $scope.study)
+                                .then(function(response){
+                                    response.success && $scope.$close();
+                                })
+                                ['finally'](function(){
+                                    $scope.pending = false;
+                                });
                         }
                     };
                 }
@@ -147,11 +152,11 @@
             return modal.result;
         }
 
-    	function postAdd($modalScope, row){
+    	function postAdd(row){
 
             var studyId;
 
-			$modalScope.pending = $scope.pending = true;
+			$scope.pending = true;
 
             row.creationDate = new Date();
             row.studyStatus = STATUS_RUNNING;
@@ -210,17 +215,6 @@
                     return response;
 		    	});
     	}
-
-    	// function crossDomainExists(url){
-    	// 	return $q(function(resolve, reject){
-    	// 		var element = document.createElement('iframe');
-    	// 		element.style.display = 'none';
-    	// 		document.body.appendChild(element);
-    	// 		element.onload = function(){};
-    	// 		element.src = url;
-    	// 	});
-
-    	// }
     }
 
     app.factory('piDialog', function($modal){
