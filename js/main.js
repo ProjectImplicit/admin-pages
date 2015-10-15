@@ -122,8 +122,6 @@
     	// setup an empty row
     	$scope.row = {};
 
-
-
     	$scope.add = add;
 
         function add(){
@@ -138,7 +136,9 @@
                         if ($scope.studyForm.$invalid) {
                             return false;
                         } else {
-                            postAdd($scope, $scope.study).then($scope.$close);
+                            postAdd($scope, $scope.study).then(function(response){
+                                response.success && $scope.$close();
+                            });
                         }
                     };
                 }
@@ -147,11 +147,11 @@
             return modal.result;
         }
 
-    	function postAdd($scope, row){
+    	function postAdd($modalScope, row){
 
             var studyId;
 
-			$scope.pending = true;
+			$modalScope.pending = $scope.pending = true;
 
             row.creationDate = new Date();
             row.studyStatus = STATUS_RUNNING;
@@ -167,16 +167,16 @@
                             content: 'There was a problem retrieving the study ID, please make sure that it is set correctly in your expt file.',
                             forceCancel: true
                         });
+                    } else {
+                        return piDialog({
+                            header: 'Confirm study ID:',
+                            content: 'Please make sure that this is the correct study ID: "' + studyId +'".',
+                            type: 'info',
+                            allowCancel: true
+                        });
                     }
-
-                    return piDialog({
-                        header: 'Confirm study ID:',
-                        content: 'Please make sure that this is the correct study ID: "' + studyId +'".',
-                        type: 'info',
-                        allowCancel: true
-                    });
                 })
-                .then(function(response){
+                .then(function(){
                     return $http.post('/implicit/StudyData', angular.extend({action:'insertRulesTable'},row));
                 })
     			.then(function(response){
@@ -193,6 +193,8 @@
                     $scope.displayedCollection.unshift(row);
     				$scope.rowCollection.push(row);
     				$scope.row = {};
+
+                    return {success:true};
     			})
                 ['catch'](function(response){
                     if (response && response.status === 403){
@@ -203,11 +205,10 @@
                         return piDialog({header: 'Add error!', content: 'An error occurred on our servers, please contact your web administrator.', forceCancel:true});
                     }
     			})
-    			['finally'](function(){
+    			['finally'](function(response){
 		    		$scope.pending = false;
+                    return response;
 		    	});
-
-
     	}
 
     	// function crossDomainExists(url){

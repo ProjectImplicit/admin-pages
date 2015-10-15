@@ -38,6 +38,17 @@
                             Before: <input type="text" class="form-control" ng-model="beforeDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
                         </th>
                     </tr>
+                    <tr ng-controller="addStudyCtrl" class="info">
+                        <th colspan="6" class="text-center">
+                            <div ng-if="pending" class="loader">Loading...</div>
+                            <button ng-if="!pending" class="btn btn-default" type="button" ng-click="add()">
+                                <span class="glyphicon glyphicon-plus"></span> Add new study
+                            </button>
+                        </th>
+                    </tr>
+                    <tr ng-if="!displayedCollection.length" class="info">
+                        <th colspan="6" class="text-center"><i>There are no studies defined yet</i></th>
+                    </tr>
                     <tr>
                         <th st-sort="studyId">ID</th>
                         <th st-sort="studyUrl">URL</th>
@@ -48,17 +59,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-controller="addStudyCtrl" class="info">
-                        <td colspan="6" class="text-center">
-                            <div ng-if="pending" class="loader">Loading...</div>
-                            <button ng-if="!pending" class="btn btn-default" type="button" ng-click="add()">
-                                <span class="glyphicon glyphicon-plus"></span> Add new study
-                            </button>
-                        </td>
-                    </tr>
-                    <tr ng-if="!displayedCollection.length" class="info">
-                        <td colspan="6" class="text-center"><i>There are no studies defined yet</i></td>
-                    </tr>
                     <tr ng-repeat="row in displayedCollection">
                         <td>{{row.studyId}}</td>
                         <td><a href="{{row.studyUrl}}">{{row.studyUrl}}</a></td>
