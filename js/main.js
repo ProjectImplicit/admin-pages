@@ -139,7 +139,7 @@
                             $scope.pending = true;
                             postAdd($scope, $scope.study)
                                 .then(function(response){
-                                    response.success && $scope.$close();
+                                    response && response.success && $scope.$close();
                                 })
                                 ['finally'](function(){
                                     $scope.pending = false;
