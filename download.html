@@ -58,6 +58,10 @@
                         <th>File Size</th>
                         <th st-sort="creationDate">Date Added</th>
                         <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr ng-if="!displayedCollection.length" class="info">
+                        <th colspan="6" class="text-center"><i>There are no studies being downloaded yet.</i></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -70,6 +74,11 @@
                         <span ng-switch-when="R" class="label label-warning">Running</span>
                         <span ng-switch-when="C" class="label label-success">Complete</span>
                         <span ng-switch-when="X" class="label label-danger">Error</span>
+                    </td>
+                    <td>
+                        <button class="btn-sm btn-danger" type="button" ng-click="remove(row)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
                     </td>
 
 <!--                     <td>

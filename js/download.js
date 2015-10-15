@@ -2,10 +2,10 @@
     var DEBUG = true;
     var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask']);
     var rowCollection;
+    var STATUS_PENDING = 'P';
 
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
         $scope.row = {db:'test'};
-
         $scope.requestDownload = requestDownload;
 
         function requestDownload(row){
@@ -25,27 +25,62 @@
                     return piDialog({header: 'Request Download Error',content: response.msg || 'Study not found'});
                 });
         }
-
     }]);
 
-    app.controller('dataCtrl', ['$scope','$http', '$rootScope', function ($scope, $http,$rootScope) {
+    app.controller('dataCtrl', ['$scope','$http', '$rootScope', 'piDialog', function ($scope, $http,$rootScope,piDialog) {
         var poll = throttle(pollServer, 5000);
+        var deletedArr = []; // an array of deleted rows
+
+        $scope.remove = removeRow;
 
         $rootScope.$on('download:poll', poll);
         rowCollection = $scope.rowCollection = window.rowCollection || [];
         poll();
 
+        function removeRow(row) {
+
+            return piDialog({
+                 header: 'Cancel Download:',
+                 content: 'Are you sure you want to cancel this download? (don\'t worry we keep all the data on our servers, you will be able to download it later).',
+                 allowCancel: true
+            }).then(function(){
+                var rowCollection = $scope.rowCollection;
+                deletedArr.push(row.id);
+
+                // remove visible row
+                for (var i = 0; i < rowCollection.length; i++){
+                    !isNotDeleted(rowCollection[i]) && rowCollection.splice(i, 1);
+                }
+
+                // request server side remove
+                return $http.post('/implicit/DashboardData',{action:'removeDownload'});
+            })
+            ['catch'](function(){
+                // return row to polling list
+                var index = deletedArr.indexOf(row.id);
+                index != -1 && deletedArr.splice(index,1);
+            });
+
+
+        }
+
+        function isNotDeleted(row){
+            return deletedArr.indexOf(row.id) === -1;
+        }
+
         function pollServer(){
             return $http.post('/implicit/DashboardData',{action:'getAllDownloads'})
                 .success(function(data){
-                    data = data ? data : [];
+                    data = data ? data.filter(isNotDeleted) : [];
                     data.forEach(function(row){
                         row.creationDate = new Date(row.creationDate);
                     });
 
-                    var pending = data.some(function(row){return row.Status === 'P';});
-                    // count on the debounce to delay this.
-                    if (pending) {pollServer();}
+                    // there is a pending row
+                    var isPending = data.some(function(row){return row.Status === STATUS_PENDING;});
+
+                    // count on debounce to delay this.
+                    if (isPending) {poll();}
 
                     $scope.rowCollection = data;
                     $scope.displayedCollection = [].concat(data);
@@ -57,6 +92,7 @@
                     var data = [];
                     for (var i=0; i<10; i++){
                         data.push({
+                            id: Math.random(),
                             studyId:(0|Math.random()*9e6).toString(36),
                             studyUrl:(0|Math.random()*9e6).toString(36),
                             creationDate:new Date(new Date() * Math.random()),
