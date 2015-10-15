@@ -1,9 +1,8 @@
 (function(angular){
-	var PRODUCTION_URL = 'http://implicit.harvard.edu';
     var STATUS_STOPPED = 'S';
     var STATUS_PAUSED = 'P';
     var STATUS_RUNNING = 'R';
-    var DEBUG = false;
+    var DEBUG = true;
 
     var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask']);
     var rowCollection;
@@ -119,80 +118,95 @@
      * Add study
      */
     app.controller('addStudyCtrl', addStudyCtrl);
-    function addStudyCtrl($scope, $http, $q, piDialog){
+    function addStudyCtrl($scope, $http, $q, $modal, piDialog){
     	// setup an empty row
     	$scope.row = {};
 
-    	$scope.ruleArr = [
-    		'/research/library/rules/Priority26.xml'
-    	];
+
 
     	$scope.add = add;
 
-    	function add(row){
+        function add(){
+            var modal = $modal.open({
+                templateUrl: 'addPoolStudy.jst',
+                controller: function($scope){
+                    $scope.ruleArr = ['/research/library/rules/Priority26.xml'];
+                    $scope.pauseArr = ['/research/library/rules/Pause26.xml.xml'];
+                    $scope.submit = function(){
+                        $scope.submitted = true;
+
+                        if ($scope.studyForm.$invalid) {
+                            return false;
+                        } else {
+                            postAdd($scope, $scope.study).then($scope.$close);
+                        }
+                    };
+                }
+            }); // found in the html
+
+            return modal.result;
+        }
+
+    	function postAdd($scope, row){
+
             var studyId;
 
-    		if (!(row.studyUrl && row.rulesUrl)){
-    			return piDialog({content: 'All fields are required'});
-    		} else {
-    			$scope.pending = true;
-    			// default values
+			$scope.pending = true;
 
-                row.creationDate = new Date();
-                row.studyStatus = STATUS_RUNNING;
+            row.creationDate = new Date();
+            row.studyStatus = STATUS_RUNNING;
 
-                return $http.post('/implicit/StudyData', angular.extend({action:'getStudyId'},row))
-                    .then(function(response){
-                        var data = response.data;
-                        studyId = data.studyId;
+            return $http.post('/implicit/StudyData', angular.extend({action:'getStudyId'},row))
+                .then(function(response){
+                    var data = response.data;
+                    studyId = data.studyId;
 
-
-                        if (!data || data.error){
-                            return piDialog({
-                                header: 'Add error!',
-                                content: 'There was a problem retrieving the study ID, please make sure that it is set correctly in your expt file.',
-                                forceCancel: true
-                            });
-                        }
-
+                    if (!data || data.error){
                         return piDialog({
-                            header: 'Confirm study ID:',
-                            content: 'Please make sure that this is the correct study ID: "' + studyId +'".',
-                            type: 'info',
-                            allowCancel: true
+                            header: 'Add error!',
+                            content: 'There was a problem retrieving the study ID, please make sure that it is set correctly in your expt file.',
+                            forceCancel: true
                         });
-                    })
-                    .then(function(response){
-                        return $http.post('/implicit/StudyData', angular.extend({action:'insertRulesTable'},row));
-                    })
-	    			.then(function(response){
-                        var data = response.data;
-                        switch (data.error){
-                            case 1 : return piDialog({header: 'Duplicate record', content: 'The ID "' + studyId + '" Already exists.'});
-                            case 2 : return piDialog({header: 'Missing study', content: 'The study at "' + row.studyUrl + '" could not be found.'});
-                            case 3 : return piDialog({header: 'Missing rule file', content: 'The rule file at "' + row.rulesUrl + '" could not be found.'});
-                            case 4 : return piDialog({header: 'Missing rule file', content: 'The file at "' + row.rulesUrl + '" does not fit the "research" schema.'});
-                        }
+                    }
 
-                        row.studyId = studyId;
+                    return piDialog({
+                        header: 'Confirm study ID:',
+                        content: 'Please make sure that this is the correct study ID: "' + studyId +'".',
+                        type: 'info',
+                        allowCancel: true
+                    });
+                })
+                .then(function(response){
+                    return $http.post('/implicit/StudyData', angular.extend({action:'insertRulesTable'},row));
+                })
+    			.then(function(response){
+                    var data = response.data;
+                    switch (data.error){
+                        case 1 : return piDialog({header: 'Duplicate record', content: 'The ID "' + studyId + '" Already exists.', forceCancel:true});
+                        case 2 : return piDialog({header: 'Missing study', content: 'The study at "' + row.studyUrl + '" could not be found.', forceCancel:true});
+                        case 3 : return piDialog({header: 'Missing rule file', content: 'The rule file at "' + row.rulesUrl + '" could not be found.', forceCancel:true});
+                        case 4 : return piDialog({header: 'Missing rule file', content: 'The file at "' + row.rulesUrl + '" does not fit the "research" schema.', forceCancel:true});
+                    }
 
-                        $scope.displayedCollection.unshift(row);
-	    				$scope.rowCollection.push(row);
-	    				$scope.row = {};
-	    			})
-                    ['catch'](function(response){
-	                    if (response && response.status === 403){
-	                    	return piDialog({header: 'Forbidden action',content: 'You do not have permission to make this change.'});
-	                    }
+                    row.studyId = studyId;
 
-                        if (response && response.status != 200){
-                            return piDialog({header: 'Add error!', content: 'An error occurred on our servers, please contact your web administrator.'});
-                        }
-	    			})
-	    			['finally'](function(){
-			    		$scope.pending = false;
-			    	});
-    		}
+                    $scope.displayedCollection.unshift(row);
+    				$scope.rowCollection.push(row);
+    				$scope.row = {};
+    			})
+                ['catch'](function(response){
+                    if (response && response.status === 403){
+                    	return piDialog({header: 'Forbidden action',content: 'You do not have permission to make this change.', forceCancel:true});
+                    }
+
+                    if (response && response.status != 200){
+                        return piDialog({header: 'Add error!', content: 'An error occurred on our servers, please contact your web administrator.', forceCancel:true});
+                    }
+    			})
+    			['finally'](function(){
+		    		$scope.pending = false;
+		    	});
+
 
     	}
 
@@ -221,7 +235,7 @@
 	        '</div>',
 	        '<div class="modal-footer">',
 	            '<button ng-if="!forceCancel" class="btn btn-primary" ng-click="$close(closeValue)">OK</button>',
-	            '<button ng-if="allowCancel || forceCancel" class="btn btn-default" ng-click="$dismiss(dismissValue)">Cancel</button>',
+	            '<button ng-if="allowCancel || forceCancel" class="btn btn-default" ng-click="$dismiss(dismissValue)">Close</button>',
 	        '</div>'
 	    ].join('\n');
 

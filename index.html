@@ -37,7 +37,6 @@
                             After: <input type="text" class="form-control" ng-model="afterDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
                             Before: <input type="text" class="form-control" ng-model="beforeDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
                         </th>
-
                     </tr>
                     <tr>
                         <th st-sort="studyId">ID</th>
@@ -49,61 +48,91 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr ng-controller="addStudyCtrl" class="info">
-                    <!-- <td>
-                        <input type="text" ng-model="row.studyId" placeholder="Study ID" class="form-control">
-                    </td> -->
-                    <td class="text-muted"><i>Study ID</i></td>
-                    <td>
-                        <input type="text" ng-model="row.studyUrl" placeholder="URL" class="form-control">
-                    </td>
-                    <td>
-                        <input type="text" ng-model="row.rulesUrl" placeholder="Rules file" typeahead="rule for rule in ruleArr | filter:$viewValue" class="form-control">
-                    </td>
-                    <td class="text-muted"><i>Date</i></td>
-                    <td class="text-muted"><i>Running</i></td>
-                    <td>
-                        <div ng-if="pending" class="loader">Loading...</div>
-                        <button ng-if="!pending" class="btn btn-default" type="button" ng-click="add(row)">
-                            <span class="glyphicon glyphicon-plus"></span>
-                        </button>
-                    </td>
-                </tr>
-                <tr ng-repeat="row in displayedCollection">
-                    <td>{{row.studyId}}</td>
-                    <td><a href="{{row.studyUrl}}">{{row.studyUrl}}</a></td>
-                    <td>{{row.rulesUrl}}</td>
-                    <td>{{row.creationDate | date:'short'}}</td>
-                    <td ng-switch="row.studyStatus">
-                        <span ng-switch-when="R" class="label label-success">Running</span>
-                        <span ng-switch-when="P" class="label label-warning">Paused</span>
-                        <span ng-switch-when="S" class="label label-danger">Stopped</span>
-                    </td>
-
-                    <td>
-                        <div ng-if="row.$pending" class="loader">Loading...</div>
-
-                        <div ng-if="!row.$pending">
-                            <span ng-switch="row.studyStatus">
-                                <button ng-switch-when="P" class="btn btn-success" type="button" ng-click="play(row)">
-                                    <span class="glyphicon glyphicon-play"></span>
-                                </button>
-
-                                <button ng-switch-when="R" class="btn btn-info" type="button" ng-click="pause(row)">
-                                    <span class="glyphicon glyphicon-pause"></span>
-                                </button>
-                            </span>
-
-                            <button class="btn btn-danger" type="button" ng-click="remove(row)">
-                                <span class="glyphicon glyphicon-remove"></span>
+                    <tr ng-controller="addStudyCtrl" class="info">
+                        <td colspan="6" class="text-center">
+                            <div ng-if="pending" class="loader">Loading...</div>
+                            <button ng-if="!pending" class="btn btn-default" type="button" ng-click="add()">
+                                <span class="glyphicon glyphicon-plus"></span> Add new study
                             </button>
-                        </div>
+                        </td>
+                    </tr>
+                    <tr ng-if="!displayedCollection.length" class="info">
+                        <td colspan="6" class="text-center"><i>There are no studies defined yet</i></td>
+                    </tr>
+                    <tr ng-repeat="row in displayedCollection">
+                        <td>{{row.studyId}}</td>
+                        <td><a href="{{row.studyUrl}}">{{row.studyUrl}}</a></td>
+                        <td>{{row.rulesUrl}}</td>
+                        <td>{{row.creationDate | date:'short'}}</td>
+                        <td ng-switch="row.studyStatus">
+                            <span ng-switch-when="R" class="label label-success">Running</span>
+                            <span ng-switch-when="P" class="label label-warning">Paused</span>
+                            <span ng-switch-when="S" class="label label-danger">Stopped</span>
+                        </td>
 
-                    </td>
-                </tr>
+                        <td>
+                            <div ng-if="row.$pending" class="loader">Loading...</div>
+
+                            <div ng-if="!row.$pending">
+                                <span ng-switch="row.studyStatus">
+                                    <button ng-switch-when="P" class="btn btn-success" type="button" ng-click="play(row)">
+                                        <span class="glyphicon glyphicon-play"></span>
+                                    </button>
+
+                                    <button ng-switch-when="R" class="btn btn-info" type="button" ng-click="pause(row)">
+                                        <span class="glyphicon glyphicon-pause"></span>
+                                    </button>
+                                </span>
+
+                                <button class="btn btn-danger" type="button" ng-click="remove(row)">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </div>
+
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+
+        <script type="text/ng-template" id="addPoolStudy.jst">
+            <div class="modal-header">
+                <h3 class="modal-title">Add new Study</h3>
+            </div>
+            <div class="modal-body">
+                <div ng-form="studyForm">
+                    <div class="form-group" ng-class="{'has-error':studyForm.studyUrl.$invalid && submitted, 'has-success':studyForm.studyUrl.$valid}">
+                        <label class="control-label">Study URL</label>
+                        <input type="text" class="form-control" ng-model="study.studyUrl" placeholder="URL" ng-required="true" name="studyUrl">
+                        <span class="help-block" ng-show="studyForm.studyUrl.$invalid && submitted">This row is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error':studyForm.rulesUrl.$invalid && submitted, 'has-success':studyForm.rulesUrl.$valid}">
+                        <label class="control-label">Rules file URL</label>
+                        <input type="text" ng-model="study.rulesUrl" placeholder="Rules file" typeahead="rule for rule in ruleArr | filter:$viewValue" class="form-control"  ng-required="true" name="rulesUrl">
+                        <span class="help-block" ng-show="studyForm.rulesUrl.$invalid && submitted">This row is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error':studyForm.targetSessions.$invalid && submitted, 'has-success':studyForm.targetSessions.$valid}">
+                        <label class="control-label">Target number of sessions</label>
+                        <input type="number" class="form-control" ng-model="study.targetSessions" ng-required="true" min="1" name="targetSessions">
+                        <span class="help-block" ng-show="studyForm.targetSessions.$invalid && submitted">This row is required and has to be an integer above 0</span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error':studyForm.pauseUrl.$invalid && submitted, 'has-success':studyForm.pauseUrl.$valid}">
+                        <label class="control-label">Auto-pause file URL</label>
+                        <input type="text" ng-model="study.pauseUrl" placeholder="auto pause file url" typeahead="pause for pause in pauseArr | filter:$viewValue" class="form-control" ng-required="true" name="pauseUrl">
+                        <span class="help-block" ng-show="studyForm.pauseUrl.$invalid && submitted">This row is required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div ng-show="pending" class="text-center">
+                    <span class="loader">Loading...</span>
+                </div>
+                <div ng-hide="pending">
+                    <button class="btn btn-primary" type="button" ng-click="submit() &&  studyForm.$valid && $close(study)">OK</button>
+                    <button class="btn btn-default" type="button" ng-click="$dismiss()">Cancel</button>
+                </div>
+            </div>
+        </script>
 
     </body>
 </html>
