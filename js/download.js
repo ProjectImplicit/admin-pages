@@ -53,7 +53,7 @@
                 }
 
                 // request server side remove
-                return $http.post('/implicit/DashboardData',{action:'removeDownload'});
+                return $http.post('/implicit/DashboardData',angular.extend({action:'removeDownload'}, row));
             })
             ['catch'](function(){
                 // return row to polling list
