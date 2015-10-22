@@ -101,6 +101,11 @@
             </div>
             <div class="modal-body">
                 <div ng-form="studyForm">
+                    <div class="form-group" ng-class="{'has-error':studyForm.userEmail.$invalid && submitted, 'has-success':studyForm.userEmail.$valid}">
+                        <label class="control-label">User Email</label>
+                        <input type="email" class="form-control" ng-model="study.userEmail" placeholder="Email" ng-required="true" name="userEmail">
+                        <span class="help-block" ng-show="studyForm.userEmail.$invalid && submitted">This row is required and must be a valid Email</span>
+                    </div>
                     <div class="form-group" ng-class="{'has-error':studyForm.studyUrl.$invalid && submitted, 'has-success':studyForm.studyUrl.$valid}">
                         <label class="control-label">Study URL</label>
                         <input type="text" class="form-control" ng-model="study.studyUrl" placeholder="URL" ng-required="true" name="studyUrl">

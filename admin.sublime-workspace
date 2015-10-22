@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"pau",
+				"pauseArr"
+			],
+			[
+				"rul",
+				"ruleArr"
+			],
+			[
 				"canc",
 				"allowCancel"
 			],
@@ -506,14 +514,6 @@
 			[
 				"timeSt",
 				"timerStop"
-			],
-			[
-				"In",
-				"INTERVAL"
-			],
-			[
-				"fo",
-				"font-weight"
 			]
 		]
 	},
@@ -532,6 +532,14 @@
 			"settings":
 			{
 				"buffer_size": 6325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 9898,
 				"line_ending": "Unix"
 			}
 		},
@@ -938,6 +946,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"26",
 			"dialog",
 			"rowcollection",
 			"deletedArr",
@@ -1064,8 +1073,7 @@
 			"settings",
 			"compile({",
 			"pi-manager",
-			"$sce",
-			"ng-class"
+			"$sce"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1211,7 +1219,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1241,7 +1249,7 @@
 						"translation.y": 1017.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1257,8 +1265,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								4997,
+								4997
 							]
 						],
 						"settings":
@@ -1268,14 +1276,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1836.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1083,
+								1117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
@@ -1287,8 +1325,8 @@
 						"selection":
 						[
 							[
-								3071,
-								3071
+								0,
+								8504
 							]
 						],
 						"settings":
@@ -1298,10 +1336,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 504.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1356,6 +1394,10 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"js/main.js"
+			],
+			[
 				"dow",
 				"js/download.js"
 			],
@@ -1370,10 +1412,6 @@
 			[
 				"main.css",
 				"css/main.css"
-			],
-			[
-				"main",
-				"js/main.js"
 			],
 			[
 				".js",
@@ -1873,9 +1911,17 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "qu",
+		"last_filter": "da",
 		"selected_items":
 		[
+			[
+				"da",
+				"~/public_html/data/data.sublime-project"
+			],
+			[
+				"q",
+				"~/public_html/quest/quest.sublime-project"
+			],
 			[
 				"qu",
 				"~/public_html/quest/quest.sublime-project"
@@ -1891,10 +1937,6 @@
 			[
 				"pip",
 				"~/public_html/pip/pip.sublime-project"
-			],
-			[
-				"q",
-				"~/public_html/questDocs/doc.sublime-project"
 			],
 			[
 				"que",
