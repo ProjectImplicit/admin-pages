@@ -9,16 +9,25 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css">
         <link rel="stylesheet" href="css/main.css">
 
-        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-ui-mask/dist/mask.js"></script>
         <script type="text/javascript" src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+
+        <script src="bower_components/ng-bs-daterangepicker/src/ng-bs-daterangepicker.js"></script>
+
+
         <script type="text/javascript" src="js/download.js"></script>
         <script type="text/javascript" src="js/stDateFilter.js"></script>
-        <script type="text/javascript">
-        </script>
+
     </head>
     <body ng-app="myApp">
         <!--[if lt IE 9]>
@@ -33,7 +42,18 @@
               <div class="form-group">
                 <input class="form-control" placeholder="Study ID" ng-model="row.studyId">
               </div>
+
               <div class="form-group">
+                <input
+                    class="form-control"
+                    type="daterange"
+                    ng-model="row.dateRange"
+                    format="MM/DD/YYYY"
+                    ranges="{'Last 7 Days': [moment().subtract(6, 'days'), moment()],'Last 30 Days': [moment().subtract(29, 'days'), moment()], 'Last 90 Days': [moment().subtract(89, 'days'), moment()]}">
+                </div>
+
+
+<!--               <div class="form-group">
                     <label>After:</label>
                     <input type="text" class="form-control" ng-model="row.startDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
               </div>
@@ -41,6 +61,8 @@
                     <label>Before:</label>
                     <input type="text" class="form-control" ng-model="row.endDate" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" model-view-value="true"/>
               </div>
+ -->
+
               <div class="form-group">
                   <select class="form-control" ng-model="row.db">
                     <option value="test" selected>Development</option>

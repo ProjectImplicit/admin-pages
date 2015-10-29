@@ -1,12 +1,13 @@
 (function(angular){
     var DEBUG = true;
-    var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask']);
+    var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask','ngBootstrap']);
     var rowCollection;
     var STATUS_PENDING = 'P';
 
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
         $scope.row = {db:'test'};
         $scope.requestDownload = requestDownload;
+        $scope.moment = window.moment;
 
         function requestDownload(row){
             if (!row.studyId){
@@ -15,6 +16,12 @@
                      content: 'The study ID is required in order to request a download.'
                 });
             }
+
+            row = angular.extend({},row, {
+                startDate: row.dateRange.startDate.toISOString(),
+                endDate: row.dateRange.endDate.toISOString(),
+                dateRange: undefined
+            });
 
             return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))
                 .success(function(){

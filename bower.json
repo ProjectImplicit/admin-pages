@@ -10,9 +10,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular-smart-table": "~2.1.0",
-    "bootstrap": "~3.3.5",
     "angular-bootstrap": "~0.13.0",
-    "angular-ui-mask": "~1.2.0"
+    "angular-smart-table": "~2.1.0",
+    "angular-ui-mask": "~1.2.0",
+    "ng-bs-daterangepicker": "~0.0.5"
   }
 }
