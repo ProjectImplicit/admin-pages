@@ -67,7 +67,7 @@
                 <tbody>
                 <tr ng-repeat="row in displayedCollection">
                     <td>{{row.studyId}}</td>
-                    <td><a href="{{row.studyUrl}}" download>{{row.studyUrl}}</a></td>
+                    <td><a href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">{{row.studyUrl}}</a></td>
                     <td><i ng-class="{'text-muted':!row.fileSize}">{{row.fileSize || "unknown" }}</i></td>
                     <td>{{row.creationDate | date:'short'}}</td>
                     <td ng-switch="row.studyStatus">

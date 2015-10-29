@@ -19,7 +19,7 @@
             return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))
                 .success(function(){
                     $scope.row = {db:'test'}; // reset row
-                    $scope.$emit('download:poll');
+                    $scope.$emit('download:poll',row);
                 })
                 .error(function(response){
                     return piDialog({header: 'Request Download Error',content: response.msg || 'Study not found'});
@@ -34,6 +34,8 @@
         $scope.remove = removeRow;
 
         $rootScope.$on('download:poll', poll);
+        $rootScope.$on('download:poll', function(e,row){console.log(row);$scope.rowCollection.unshift(row);}); // temporarily add row to the stack
+
         rowCollection = $scope.rowCollection = window.rowCollection || [];
         poll();
 

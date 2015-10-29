@@ -531,7 +531,15 @@
 			"file": "js/download.js",
 			"settings":
 			{
-				"buffer_size": 6325,
+				"buffer_size": 6346,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 9061,
 				"line_ending": "Unix"
 			}
 		},
@@ -540,14 +548,6 @@
 			"settings":
 			{
 				"buffer_size": 9898,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 8504,
 				"line_ending": "Unix"
 			}
 		}
@@ -786,9 +786,11 @@
 	],
 	"file_history":
 	[
-		"/home/eladzlot/public_html/admin/css/main.css",
-		"/home/eladzlot/public_html/admin/index.html",
 		"/home/eladzlot/public_html/admin/js/main.js",
+		"/home/eladzlot/public_html/admin/index.html",
+		"/home/eladzlot/public_html/admin/.gitignore",
+		"/home/eladzlot/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/eladzlot/public_html/admin/css/main.css",
 		"/home/eladzlot/.gitconfig",
 		"/home/eladzlot/public_html/admin/templates/addPoolStudy.jst",
 		"/home/eladzlot/public_html/admin/bower_components/angular-bootstrap/ui-bootstrap.js",
@@ -850,7 +852,6 @@
 		"/home/eladzlot/public_html/quest/src/styles/_custom.scss",
 		"/home/eladzlot/.config/sublime-text-3/Packages/User/MarkdownTOC.sublime-settings",
 		"/home/eladzlot/.config/sublime-text-3/Packages/MarkdownTOC/MarkdownTOC.sublime-settings",
-		"/home/eladzlot/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/piQuest/piqPage.html",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/piQuest/piqPage-directive.js",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/slider/slider.js",
@@ -912,8 +913,7 @@
 		"/home/eladzlot/bin/cpdatabase.sh",
 		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateFilter.js",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/questController.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectives_test.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/select/select_test.js"
+		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectives_test.js"
 	],
 	"find":
 	{
@@ -946,6 +946,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".post",
+			"delete",
 			"26",
 			"dialog",
 			"rowcollection",
@@ -1071,9 +1073,7 @@
 			"bv",
 			"there was an error in the task",
 			"settings",
-			"compile({",
-			"pi-manager",
-			"$sce"
+			"compile({"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1258,15 +1258,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6325,
+						"buffer_size": 6346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4997,
-								4997
+								2305,
+								2305
 							]
 						],
 						"settings":
@@ -1276,7 +1276,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1836.0,
+						"translation.y": 385.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1284,6 +1284,36 @@
 				},
 				{
 					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3139,
+								3139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 562.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1295,43 +1325,13 @@
 						"selection":
 						[
 							[
-								1083,
-								1117
+								442,
+								442
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 156.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8504,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								8504
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1398,12 +1398,16 @@
 				"js/main.js"
 			],
 			[
-				"dow",
-				"js/download.js"
-			],
-			[
 				"ind",
 				"index.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"dow",
+				"js/download.js"
 			],
 			[
 				"down",
@@ -1592,10 +1596,6 @@
 			[
 				"mai",
 				".tmp/styles/main.css"
-			],
-			[
-				"inde",
-				"src/index.html"
 			],
 			[
 				".htacc",
@@ -1911,19 +1911,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "da",
+		"last_filter": "qu",
 		"selected_items":
 		[
+			[
+				"qu",
+				"~/public_html/quest/quest.sublime-project"
+			],
 			[
 				"da",
 				"~/public_html/data/data.sublime-project"
 			],
 			[
 				"q",
-				"~/public_html/quest/quest.sublime-project"
-			],
-			[
-				"qu",
 				"~/public_html/quest/quest.sublime-project"
 			],
 			[
