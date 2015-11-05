@@ -114,6 +114,9 @@
                     <div class="form-group" ng-class="{'has-error':studyForm.rulesUrl.$invalid && submitted, 'has-success':studyForm.rulesUrl.$valid}">
                         <label class="control-label">Rules file URL</label>
                         <input type="text" ng-model="study.rulesUrl" placeholder="Rules file" typeahead="rule for rule in ruleArr | filter:$viewValue" class="form-control"  ng-required="true" name="rulesUrl">
+                        <span class="help-block">
+                            <button type="button" class="btn btn-default btn-xs" ng-click="study.rulesUrl='/research/library/rules/Priority26.xml'">Priority 26</button>
+                        </span>
                         <span class="help-block" ng-show="studyForm.rulesUrl.$invalid && submitted">This row is required</span>
                     </div>
                     <div class="form-group" ng-class="{'has-error':studyForm.targetSessions.$invalid && submitted, 'has-success':studyForm.targetSessions.$valid}">
@@ -124,6 +127,10 @@
                     <div class="form-group" ng-class="{'has-error':studyForm.pauseUrl.$invalid && submitted, 'has-success':studyForm.pauseUrl.$valid}">
                         <label class="control-label">Auto-pause file URL</label>
                         <input type="text" ng-model="study.pauseUrl" placeholder="auto pause file url" typeahead="pause for pause in pauseArr | filter:$viewValue" class="form-control" ng-required="true" name="pauseUrl">
+                        <span class="help-block">
+                            <button type="button" class="btn btn-default btn-xs" ng-click="study.pauseUrl='/research/library/rules/default.xml'">Default</button>
+                            <button type="button" class="btn btn-default btn-xs" ng-click="study.pauseUrl='/research/library/rules/neverend.xml'">Never Ending</button>
+                        </span>
                         <span class="help-block" ng-show="studyForm.pauseUrl.$invalid && submitted">This row is required</span>
                     </div>
                 </div>
