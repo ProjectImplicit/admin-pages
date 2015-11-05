@@ -6,6 +6,11 @@
 
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
         $scope.row = {db:'test'};
+        $scope.dateRange = {
+            startDate:window.moment().subtract(1,'month'),
+            endDate: window.moment()
+        };
+
         $scope.requestDownload = requestDownload;
         $scope.moment = window.moment;
 
@@ -18,9 +23,8 @@
             }
 
             row = angular.extend({},row, {
-                startDate: row.dateRange.startDate.toISOString(),
-                endDate: row.dateRange.endDate.toISOString(),
-                dateRange: undefined
+                startDate: $scope.dateRange.startDate && $scope.dateRange.startDate.toISOString(),
+                endDate: $scope.dateRange.endDate && $scope.dateRange.endDate.toISOString()
             });
 
             return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))

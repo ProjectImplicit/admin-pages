@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"mod",
+				"modelValue"
+			],
+			[
+				"str",
+				"startDate"
+			],
+			[
+				"mo",
+				"moment"
+			],
+			[
+				"dat",
+				"dateRange"
+			],
+			[
+				"st",
+				"startDate"
+			],
+			[
 				"pau",
 				"pauseArr"
 			],
@@ -44,16 +64,8 @@
 				"pauseUrl"
 			],
 			[
-				"st",
-				"studyForm"
-			],
-			[
 				"stud",
 				"studyUrl"
-			],
-			[
-				"mod",
-				"modal"
 			],
 			[
 				"post",
@@ -456,10 +468,6 @@
 				"timerProceed"
 			],
 			[
-				"mo",
-				"modalConstructor"
-			],
-			[
 				"inject",
 				"injector"
 			],
@@ -506,14 +514,6 @@
 			[
 				"end",
 				"endSpy"
-			],
-			[
-				"timel",
-				"timerEl"
-			],
-			[
-				"timeSt",
-				"timerStop"
 			]
 		]
 	},
@@ -523,7 +523,23 @@
 			"file": "download.html",
 			"settings":
 			{
-				"buffer_size": 5588,
+				"buffer_size": 6646,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower_components/ng-bs-daterangepicker/src/ng-bs-daterangepicker.js",
+			"settings":
+			{
+				"buffer_size": 3388,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower.json",
+			"settings":
+			{
+				"buffer_size": 333,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,23 +547,7 @@
 			"file": "js/download.js",
 			"settings":
 			{
-				"buffer_size": 6346,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 9061,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 9898,
+				"buffer_size": 6942,
 				"line_ending": "Unix"
 			}
 		}
@@ -786,8 +786,10 @@
 	],
 	"file_history":
 	[
-		"/home/eladzlot/public_html/admin/js/main.js",
+		"/home/eladzlot/public_html/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js",
 		"/home/eladzlot/public_html/admin/index.html",
+		"/home/eladzlot/public_html/admin/js/download.js",
+		"/home/eladzlot/public_html/admin/js/main.js",
 		"/home/eladzlot/public_html/admin/.gitignore",
 		"/home/eladzlot/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/eladzlot/public_html/admin/css/main.css",
@@ -911,9 +913,7 @@
 		"/home/eladzlot/public_html/quest/src/js/quest/API.js",
 		"/home/eladzlot/public_html/quest/src/js/quest/directives/text/text_test.js",
 		"/home/eladzlot/bin/cpdatabase.sh",
-		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateFilter.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/questController.js",
-		"/home/eladzlot/public_html/quest/src/js/quest/directives/questDirectives_test.js"
+		"/home/eladzlot/public_html/quest/src/js/utils/database/template/templateFilter.js"
 	],
 	"find":
 	{
@@ -946,6 +946,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n        ",
+			"daterange",
+			"ngmodel",
+			"dateRange",
+			"daterange",
+			"daterangepicker",
+			"module",
+			"poll",
 			".post",
 			"delete",
 			"26",
@@ -1065,15 +1073,7 @@
 			"defa",
 			"resumeBootstrap",
 			"choose",
-			"foreach",
-			"activatePIP",
-			"'bv'",
-			"\"bv\"",
-			".bv",
-			"bv",
-			"there was an error in the task",
-			"settings",
-			"compile({"
+			"foreach"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1219,7 +1219,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1228,15 +1228,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5588,
+						"buffer_size": 6646,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4277,
-								4277
+								2666,
+								2666
 							]
 						],
 						"settings":
@@ -1246,37 +1246,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1017.0,
+						"translation.y": 219.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/download.js",
+					"file": "bower_components/ng-bs-daterangepicker/src/ng-bs-daterangepicker.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6346,
+						"buffer_size": 3388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2305,
-								2305
+								2188,
+								2188
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 385.0,
+						"translation.y": 667.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1284,49 +1283,49 @@
 				},
 				{
 					"buffer": 2,
-					"file": "index.html",
+					"file": "bower.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9061,
+						"buffer_size": 333,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3139,
-								3139
+								292,
+								292
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 562.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "js/main.js",
+					"file": "js/download.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9898,
+						"buffer_size": 6942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								442,
-								442
+								936,
+								936
 							]
 						],
 						"settings":
@@ -1339,7 +1338,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1394,12 +1393,24 @@
 		"selected_items":
 		[
 			[
-				"main",
-				"js/main.js"
+				"down",
+				"js/download.js"
+			],
+			[
+				"bo",
+				"bower.json"
+			],
+			[
+				"do",
+				"download.html"
 			],
 			[
 				"ind",
 				"index.html"
+			],
+			[
+				"main",
+				"js/main.js"
 			],
 			[
 				"inde",
@@ -1408,10 +1419,6 @@
 			[
 				"dow",
 				"js/download.js"
-			],
-			[
-				"down",
-				"download.html"
 			],
 			[
 				"main.css",
@@ -1428,10 +1435,6 @@
 			[
 				"nor",
 				"css/normalize.css"
-			],
-			[
-				"bo",
-				"bower.json"
 			],
 			[
 				"mixer",
@@ -1900,10 +1903,6 @@
 			[
 				"gridtest",
 				"src/js/quest/directives/grid/grid_test.js"
-			],
-			[
-				"piqpag",
-				"src/js/quest/directives/piQuest/piqPage-directive.js"
 			]
 		],
 		"width": 0.0
@@ -1917,6 +1916,10 @@
 			[
 				"qu",
 				"~/public_html/quest/quest.sublime-project"
+			],
+			[
+				"data",
+				"~/public_html/data/data.sublime-project"
 			],
 			[
 				"da",
