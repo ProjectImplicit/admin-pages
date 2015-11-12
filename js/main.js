@@ -128,8 +128,9 @@
             var modal = $modal.open({
                 templateUrl: 'addPoolStudy.jst',
                 controller: function($scope){
-                    $scope.ruleArr = ['/research/library/rules/Priority26.xml'];
-                    $scope.pauseArr = ['/research/library/rules/Pause26.xml'];
+                    // these are left here in case we want to reimplement autocomplete
+                    $scope.ruleArr = [];
+                    $scope.pauseArr = [];
 
                     $scope.study = {
                         rulesUrl: $scope.ruleArr[0],
