@@ -2,7 +2,7 @@
     var DEBUG = true;
     var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask','ngBootstrap']);
     var rowCollection;
-    var STATUS_PENDING = 'P';
+    var STATUS_PENDING = 'R';
 
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
         $scope.row = {db:'test'};
@@ -90,8 +90,8 @@
                     });
 
                     // there is a pending row
-                    var isPending = data.some(function(row){return row.Status === STATUS_PENDING;});
-
+                    var isPending = data.some(function(row){return row.studyStatus === STATUS_PENDING;});
+	
                     // count on debounce to delay this.
                     if (isPending) {poll();}
 
@@ -120,14 +120,19 @@
 
         function throttle (callback, limit) {
             var wait = false;                 // Initially, we're not waiting
+		var callLater = false;
             return function () {              // We return a throttled function
                 if (!wait) {                  // If we're not waiting
                     callback.call();          // Execute users function
                     wait = true;              // Prevent future invocations
                     setTimeout(function () {  // After a period of time
-                        wait = false;         // And allow future invocations
-                    }, limit);
-                }
+                       wait = false;
+			if (callLater){
+				callLater = false;
+				callback.call();
+			}
+                    }, limit || 1000);
+                } else {callLater = true}
             };
         }
     }]);
