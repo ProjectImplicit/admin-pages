@@ -4,7 +4,7 @@
     var rowCollection;
     var STATUS_PENDING = 'R';
 
-    app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
+    app.controller('requestCtrl', ['$scope','$http', 'piDialog', '$q', function ($scope, $http,piDialog, $q) {
         $scope.row = {db:'test'};
         $scope.dateRange = {
             startDate: window.moment(0),
@@ -28,7 +28,11 @@
             });
 
             return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))
-                .success(function(){
+                .success(function(response){
+                    if (response && response.error){
+                        return $q.reject(response);
+                    }
+
                     $scope.row = {db:'test'}; // reset row
                     $scope.$emit('download:poll',row);
                 })
@@ -91,7 +95,7 @@
 
                     // there is a pending row
                     var isPending = data.some(function(row){return row.studyStatus === STATUS_PENDING;});
-	
+
                     // count on debounce to delay this.
                     if (isPending) {poll();}
 
