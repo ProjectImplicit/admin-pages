@@ -7,7 +7,7 @@
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', function ($scope, $http,piDialog) {
         $scope.row = {db:'test'};
         $scope.dateRange = {
-            startDate:window.moment().subtract(1,'month'),
+            startDate: window.moment(0),
             endDate: window.moment()
         };
 

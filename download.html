@@ -40,7 +40,7 @@
 
             <form class="form-inline" ng-controller="requestCtrl">
               <div class="form-group">
-                <input class="form-control" placeholder="Study ID" ng-model="row.studyId">
+                <input class="form-control" placeholder="Study ID" ng-model="row.studyId" value="">
               </div>
 
               <div class="form-group">
@@ -49,8 +49,14 @@
                     type="daterange"
                     ng-model="dateRange"
                     format="MM/DD/YYYY"
-                    ranges="{'Last 7 Days': [moment().subtract(6, 'days'), moment()],'Last 30 Days': [moment().subtract(29, 'days'), moment()], 'Last 90 Days': [moment().subtract(89, 'days'), moment()], 'All time': [moment.unix(0), moment()]}"
-                    placeholder="Date Range">
+                    ranges="{
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'Last 90 Days': [moment().subtract(89, 'days'), moment()],
+                        'All time': [moment(0), moment(), true]
+                    }"
+                    placeholder="Date Range"
+                    value="">
                 </div>
 
 
