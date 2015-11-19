@@ -5,6 +5,7 @@
     var STATUS_PENDING = 'R';
 
     app.controller('requestCtrl', ['$scope','$http', 'piDialog', '$q', function ($scope, $http,piDialog, $q) {
+        $scope.loading = false;
         $scope.row = {db:'test'};
         $scope.dateRange = {
             startDate: window.moment(0),
@@ -14,7 +15,9 @@
         $scope.requestDownload = requestDownload;
         $scope.moment = window.moment;
 
+
         function requestDownload(row){
+
             if (!row.studyId){
                 return piDialog({
                      header: 'Request Download:',
@@ -27,6 +30,7 @@
                 endDate: $scope.dateRange.endDate && $scope.dateRange.endDate.toISOString()
             });
 
+            $scope.loading = true;
             return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))
                 .success(function(response){
                     if (response && response.error){
@@ -38,6 +42,9 @@
                 })
                 .error(function(response){
                     return piDialog({header: 'Request Download Error',content: response.msg || 'Study not found'});
+                })
+                .finally(function(){
+                    $scope.loading = false;
                 });
         }
     }]);
