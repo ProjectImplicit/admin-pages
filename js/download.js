@@ -91,6 +91,8 @@
                     data = data ? data.filter(isNotDeleted) : [];
                     data.forEach(function(row){
                         row.creationDate = new Date(row.creationDate);
+                        row.startDate = new Date(row.startDate);
+                        row.endDate = new Date(row.endDate);
                     });
 
                     // there is a pending row
@@ -112,7 +114,10 @@
                             id: Math.random(),
                             studyId:(0|Math.random()*9e6).toString(36),
                             studyUrl:(0|Math.random()*9e6).toString(36),
+                            db: Math.random() > 0.5 ? 'production' : 'development',
                             creationDate:new Date(new Date() * Math.random()),
+                            startDate:new Date(new Date() * Math.random()),
+                            endDate:new Date(new Date() * Math.random()),
                             studyStatus: ['R','C','X'][Math.floor(Math.random()*3)]
                         });
                     }

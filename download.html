@@ -84,8 +84,11 @@
                     <tr>
                         <th st-sort="studyId">ID</th>
                         <th st-sort="studyUrl">URL</th>
+                        <th st-sort="db">Database</th>
                         <th>File Size</th>
                         <th st-sort="creationDate">Date Added</th>
+                        <th st-sort="startDate">Start Date</th>
+                        <th st-sort="endDate">End Date</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -97,8 +100,11 @@
                 <tr ng-repeat="row in displayedCollection">
                     <td>{{row.studyId}}</td>
                     <td><a href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">{{row.studyUrl}}</a></td>
+                    <td>{{row.db}}</td>
                     <td><i ng-class="{'text-muted':!row.fileSize}">{{row.fileSize || "unknown" }}</i></td>
                     <td>{{row.creationDate | date:'short'}}</td>
+                    <td>{{row.startDate | date:'short'}}</td>
+                    <td>{{row.endDate | date:'short'}}</td>
                     <td ng-switch="row.studyStatus">
                         <span ng-switch-when="R" class="label label-warning">Running</span>
                         <span ng-switch-when="C" class="label label-success">Complete</span>
