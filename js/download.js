@@ -37,7 +37,6 @@
                         return $q.reject(response);
                     }
 
-                    $scope.row = {db:'test'}; // reset row
                     $scope.$emit('download:poll',row);
                 })
                 .error(function(response){
