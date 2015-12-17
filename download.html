@@ -74,7 +74,7 @@
                 <thead>
                     <tr>
                         <th st-sort="studyId">ID</th>
-                        <th st-sort="studyUrl">URL</th>
+                        <th>Data File</th>
                         <th st-sort="db">Database</th>
                         <th>File Size</th>
                         <th st-sort="creationDate">Date Added</th>
@@ -90,7 +90,7 @@
                 <tbody>
                 <tr ng-repeat="row in displayedCollection">
                     <td>{{row.studyId}}</td>
-                    <td><a href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">{{row.studyUrl}}</a></td>
+                    <td><a href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">Download Data</a></td>
                     <td>{{row.db}}</td>
                     <td><i ng-class="{'text-muted':!row.fileSize}">{{row.fileSize || "unknown" }}</i></td>
                     <td>{{row.creationDate | date:'short'}}</td>

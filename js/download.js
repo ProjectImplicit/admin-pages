@@ -63,8 +63,11 @@
         function removeRow(row) {
 
             return piDialog({
-                 header: 'Cancel Download:',
-                 content: 'Are you sure you want to cancel this download? (don\'t worry we keep all the data on our servers, you will be able to download it later).',
+                 header: 'Delete Request:',
+                 content: [
+                    'Are you sure you want to delete this request from your queue?',
+                    '(don\'t worry, the data will stay on our servers and you can request it again in the future)'
+                ].join('</br>'),
                  allowCancel: true
             }).then(function(){
                 var rowCollection = $scope.rowCollection;
@@ -147,11 +150,15 @@
 				callback.call();
 			}
                     }, limit || 1000);
-                } else {callLater = true}
+                } else {callLater = true;}
             };
         }
     }]);
 
+
+    app.config(['$sceProvider', function($sceProvider){
+        $sceProvider.enabled(false);
+    }]);
 
     app.factory('piDialog', function($modal){
         var alertTmp = [
@@ -162,7 +169,7 @@
                 '</h3>',
             '</div>',
             '<div class="modal-body">',
-                '<p class="lead">{{content}}</p>',
+                '<p class="lead" ng-bind-html="content"></p>',
             '</div>',
             '<div class="modal-footer">',
                 '<button class="btn btn-primary" ng-click="$close(closeValue)">OK</button>',
