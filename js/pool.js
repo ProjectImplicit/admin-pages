@@ -198,6 +198,7 @@
                         case 2 : return piDialog({header: 'Missing study', content: 'The study at "' + row.studyUrl + '" could not be found.', forceCancel:true});
                         case 3 : return piDialog({header: 'Missing rule file', content: 'The rule file at "' + row.rulesUrl + '" could not be found.', forceCancel:true});
                         case 4 : return piDialog({header: 'Missing rule file', content: 'The file at "' + row.rulesUrl + '" does not fit the "research" schema.', forceCancel:true});
+                        case 5 : return piDialog({header: 'Error updating production pool', content: 'Please refresh manually or contact Andy. This error is caused when the research pool DB is correctly updated, but dev2 is unable to notify the prod servers of the change.', forceCancel:true});
                     }
 
                     row.studyId = studyId;
