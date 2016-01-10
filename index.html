@@ -61,8 +61,8 @@
                 <tbody>
                     <tr ng-repeat="row in displayedCollection">
                         <td>{{row.studyId}}</td>
-                        <td><a href="{{row.studyUrl}}">{{row.studyUrl}}</a></td>
-                        <td>{{row.rulesUrl}}</td>
+                        <td><a href="https://implicit.harvard.edu/implicit/{{row.studyUrl}}">Study</a></td>
+                        <td><a href="https://implicit.harvard.edu/implicit/{{row.rulesUrl}}">Rules</a></td>
                         <td>{{row.creationDate | date:'short'}}</td>
                         <td ng-switch="row.studyStatus">
                             <span ng-switch-when="R" class="label label-success">Running</span>
