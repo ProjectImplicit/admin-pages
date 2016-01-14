@@ -31,7 +31,7 @@
             });
 
             $scope.loading = true;
-            return $http.post('/implicit/DashboardData', angular.extend({action:'download'}, row))
+            return $http.post('/dashboard/DashboardData', angular.extend({action:'download'}, row))
                 .success(function(response){
                     if (response && response.error){
                         return $q.reject(response);
@@ -79,7 +79,7 @@
                 }
 
                 // request server side remove
-                return $http.post('/implicit/DashboardData',angular.extend({action:'removeDownload'}, row));
+                return $http.post('/dashboard/DashboardData',angular.extend({action:'removeDownload'}, row));
             })
             ['catch'](function(){
                 // return row to polling list
@@ -95,7 +95,7 @@
         }
 
         function pollServer(){
-            return $http.post('/implicit/DashboardData',{action:'getAllDownloads'})
+            return $http.post('/dashboard/DashboardData',{action:'getAllDownloads'})
                 .success(function(data){
                     data = data ? data.filter(isNotDeleted) : [];
                     data.forEach(function(row){

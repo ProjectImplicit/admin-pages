@@ -5,7 +5,7 @@
     app.controller('dataCtrl', ['$scope','$http', function ($scope, $http) {
         $scope.rowCollection = [];
 
-        $http.post('/implicit/StudyData',{action:'getLast100PoolUpdates'})
+        $http.post('/dashboard/StudyData',{action:'getLast100PoolUpdates'})
             .success(function(data){
                 data = data ? data : [];
                 data.forEach(function(row){

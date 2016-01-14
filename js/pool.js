@@ -14,7 +14,7 @@
 
     	rowCollection = $scope.rowCollection = window.rowCollection || [];
 
-        $http.post('/implicit/StudyData',{action:'getAllPoolStudies'})
+        $http.post('/dashboard/StudyData',{action:'getAllPoolStudies'})
             .success(function(data){
                 data = data ? data : [];
                 data.forEach(function(row){
@@ -96,7 +96,7 @@
 
             return $http
             	// update rules table
-                .post('/implicit/StudyData',angular.extend({action:'updateRulesTable'},row))
+                .post('/dashboard/StudyData',angular.extend({action:'updateRulesTable'},row))
                 // on success
                 .success(function(response){
                     row.studyStatus = targetStatus;
@@ -168,7 +168,7 @@
             row.creationDate = new Date();
             row.studyStatus = STATUS_RUNNING;
 
-            return $http.post('/implicit/StudyData', angular.extend({action:'getStudyId'},row))
+            return $http.post('/dashboard/StudyData', angular.extend({action:'getStudyId'},row))
                 .then(function(response){
                     var data = response.data;
                     studyId = data.studyId;
@@ -189,7 +189,7 @@
                     }
                 })
                 .then(function(){
-                    return $http.post('/implicit/StudyData', angular.extend({action:'insertRulesTable'},row));
+                    return $http.post('/dashboard/StudyData', angular.extend({action:'insertRulesTable'},row));
                 })
     			.then(function(response){
                     var data = response.data;
