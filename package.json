@@ -1,0 +1,23 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "administration pages for dashboard",
+  "main": "fixtures.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectImplicit/admin-pages.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ProjectImplicit/admin-pages/issues"
+  },
+  "homepage": "https://github.com/ProjectImplicit/admin-pages#readme",
+  "devDependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4"
+  }
+}

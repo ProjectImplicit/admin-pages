@@ -84,13 +84,16 @@
                         <th>Actions</th>
                     </tr>
                     <tr ng-if="!displayedCollection.length" class="info">
-                        <th colspan="6" class="text-center"><i>There are no studies being downloaded yet.</i></th>
+                        <th colspan="9" class="text-center"><i>There are no studies being downloaded yet.</i></th>
                     </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="row in displayedCollection">
                     <td>{{row.studyId}}</td>
-                    <td><a href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">Download Data</a></td>
+                    <td>
+                        <a ng-if="row.fileSize" href="{{row.studyUrl}}" download ng-class="{loader:!row.studyUrl}">Download Data</a>
+                        <i class="text-muted" ng-if="!row.fileSize">No data</i>
+                    </td>
                     <td>{{row.db}}</td>
                     <td><i ng-class="{'text-muted':!row.fileSize}">{{row.fileSize || "unknown" }}</i></td>
                     <td>{{row.creationDate | date:'short'}}</td>

@@ -1,5 +1,4 @@
 (function(angular){
-    var DEBUG = true;
     var app = angular.module('myApp',['smart-table','ui.bootstrap','ui.mask','ngBootstrap']);
     var rowCollection;
     var STATUS_PENDING = 'R';
@@ -14,6 +13,8 @@
 
         $scope.requestDownload = requestDownload;
         $scope.moment = window.moment;
+
+
 
 
         function requestDownload(row){
@@ -32,15 +33,16 @@
 
             $scope.loading = true;
             return $http.post('/dashboard/DashboardData', angular.extend({action:'download'}, row))
-                .success(function(response){
-                    if (response && response.error){
-                        return $q.reject(response);
+                .then(function(response){
+                    var data = response.data;
+                    if (data && data.error){
+                        return $q.reject(data);
                     }
 
                     $scope.$emit('download:poll',row);
                 })
-                .error(function(response){
-                    return piDialog({header: 'Request Download Error',content: response.msg || 'Study not found'});
+                ['catch'](function(data){
+                    return piDialog({header: 'Request Download Error',content: data.msg || 'Study not found'});
                 })
                 .finally(function(){
                     $scope.loading = false;
@@ -48,8 +50,8 @@
         }
     }]);
 
-    app.controller('dataCtrl', ['$scope','$http', '$rootScope', 'piDialog', function ($scope, $http,$rootScope,piDialog) {
-        var poll = throttle(pollServer, 5000);
+    app.controller('dataCtrl', ['$scope','$http', '$rootScope', 'piDialog', '$q', function ($scope, $http,$rootScope,piDialog, $q) {
+        var poll = debounce(pollServer, 5000);
         var deletedArr = []; // an array of deleted rows
 
         $scope.remove = removeRow;
@@ -58,7 +60,7 @@
         $rootScope.$on('download:poll', function(e,row){console.log(row);$scope.rowCollection.unshift(row);}); // temporarily add row to the stack
 
         rowCollection = $scope.rowCollection = window.rowCollection || [];
-        poll();
+        pollServer();
 
         function removeRow(row) {
 
@@ -79,12 +81,20 @@
                 }
 
                 // request server side remove
-                return $http.post('/dashboard/DashboardData',angular.extend({action:'removeDownload'}, row));
+                return $http.post('/dashboard/DashboardData',angular.extend({action:'removeDownload'}, row))
+                    .then(function(response){
+                        var data = response.data || {};
+                        if (data.error){
+                            return $q.reject(response);
+                        }
+                    });
             })
-            ['catch'](function(){
+            ['catch'](function(response){
+                var data = response ? response.data : {};
                 // return row to polling list
                 var index = deletedArr.indexOf(row.id);
                 index != -1 && deletedArr.splice(index,1);
+                piDialog({header:'Delete Request', content:data.msg || 'Failed to delete request.'});
             });
 
 
@@ -96,7 +106,12 @@
 
         function pollServer(){
             return $http.post('/dashboard/DashboardData',{action:'getAllDownloads'})
-                .success(function(data){
+                .then(function(response){
+                    var data = response.data;
+                    if (data && data.error){
+                        return $q.reject(data);
+                    }
+
                     data = data ? data.filter(isNotDeleted) : [];
                     data.forEach(function(row){
                         row.creationDate = new Date(row.creationDate);
@@ -113,46 +128,26 @@
                     $scope.rowCollection = data;
                     $scope.displayedCollection = [].concat(data);
                 })
-                .error(function(e){
-                    if (!DEBUG){
-                        throw new Error(e);
-                    }
-                    var data = [];
-                    for (var i=0; i<10; i++){
-                        data.push({
-                            id: Math.random(),
-                            studyId:(0|Math.random()*9e6).toString(36),
-                            studyUrl:(0|Math.random()*9e6).toString(36),
-                            db: Math.random() > 0.5 ? 'production' : 'development',
-                            creationDate:new Date(new Date() * Math.random()),
-                            startDate:new Date(new Date() * Math.random()),
-                            endDate:new Date(new Date() * Math.random()),
-                            studyStatus: ['R','C','X'][Math.floor(Math.random()*3)]
-                        });
-                    }
-
-                    $scope.rowCollection = data;
-                    $scope.displayedCollection = [].concat(data);
+                ['catch'](function(response){
+                    return piDialog({header: 'Load data',content: response.msg || 'Could not access download data'});
                 });
         }
 
-        function throttle (callback, limit) {
-            var wait = false;                 // Initially, we're not waiting
-		var callLater = false;
-            return function () {              // We return a throttled function
-                if (!wait) {                  // If we're not waiting
-                    callback.call();          // Execute users function
-                    wait = true;              // Prevent future invocations
-                    setTimeout(function () {  // After a period of time
-                       wait = false;
-			if (callLater){
-				callLater = false;
-				callback.call();
-			}
-                    }, limit || 1000);
-                } else {callLater = true;}
-            };
-        }
+		function debounce(func, wait, immediate) {
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if (!immediate) {func.apply(context, args);}
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if (callNow) {func.apply(context, args);}
+			};
+		}
+
     }]);
 
 
@@ -178,7 +173,6 @@
         ].join('\n');
 
         function dialog(options){
-
             var modalInstance = $modal.open({
                 controller: function($scope){
                     angular.extend($scope, {
