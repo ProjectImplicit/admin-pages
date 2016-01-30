@@ -18,7 +18,6 @@
 
 
         function requestDownload(row){
-
             if (!row.studyId){
                 return piDialog({
                      header: 'Request Download:',
@@ -32,6 +31,7 @@
             });
 
             $scope.loading = true;
+            $scope.$emit('download:wait'); // prevent polling while download request is in progress
             return $http.post('/dashboard/DashboardData', angular.extend({action:'download'}, row))
                 .then(function(response){
                     var data = response.data;
@@ -39,12 +39,14 @@
                         return $q.reject(data);
                     }
 
+                    $scope.$emit('download:continue'); // allow polling again so that we're sure that the polling requests catches
                     $scope.$emit('download:poll',row);
                 })
                 ['catch'](function(data){
                     return piDialog({header: 'Request Download Error',content: data.msg || 'Study not found'});
                 })
                 .finally(function(){
+                    $scope.$emit('download:continue'); // allow polling again even if request fails for some reason
                     $scope.loading = false;
                 });
         }
@@ -53,11 +55,21 @@
     app.controller('dataCtrl', ['$scope','$http', '$rootScope', 'piDialog', '$q', function ($scope, $http,$rootScope,piDialog, $q) {
         var poll = debounce(pollServer, 5000);
         var deletedArr = []; // an array of deleted rows
+        var wait = false; // wait for download
 
         $scope.remove = removeRow;
 
         $rootScope.$on('download:poll', poll);
         $rootScope.$on('download:poll', function(e,row){console.log(row);$scope.rowCollection.unshift(row);}); // temporarily add row to the stack
+
+        /**
+         * The wait and continue API is there to prevent polling while download happens
+         * We had a problem with the server not being up to date with the download request which caused a discrepancy between the local data
+         * And the server data.
+         * The solution is not to update until the download request is complete and we are sure that the server is up to date.
+         */
+        $rootScope.$on('download:wait', function(){wait=true;})
+        $rootScope.$on('download:continue', function(){wait=false;})
 
         rowCollection = $scope.rowCollection = window.rowCollection || [];
         pollServer();
@@ -105,6 +117,10 @@
         }
 
         function pollServer(){
+            if (wait) {
+                return $q.resolve();
+            };
+
             return $http.post('/dashboard/DashboardData',{action:'getAllDownloads'})
                 .then(function(response){
                     var data = response.data;

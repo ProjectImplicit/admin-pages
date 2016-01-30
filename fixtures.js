@@ -42,11 +42,12 @@ router.post('/',function(req,res){
                 studyStatus: ['R','C','X'][Math.floor(Math.random()*3)]
             });
         }
-
     	res.json(data);
         break;
     case 'download':
-        res.json({error:'true', msg:'download error'});
+        setTimeout(function(){
+            res.json({error:false, msg:'download error'});
+        },4000);
         break;
     case 'removeDownload':
         res.json({error:'true', msg:'remove error'});
