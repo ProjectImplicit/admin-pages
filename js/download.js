@@ -14,9 +14,6 @@
         $scope.requestDownload = requestDownload;
         $scope.moment = window.moment;
 
-
-
-
         function requestDownload(row){
             if (!row.studyId){
                 return piDialog({
@@ -26,12 +23,16 @@
             }
 
             row = angular.extend({},row, {
+                $pending: true,
+                studyStatus: STATUS_PENDING,
+                creationDate: new Date(),
                 startDate: $scope.dateRange.startDate && $scope.dateRange.startDate.toISOString(),
                 endDate: $scope.dateRange.endDate && $scope.dateRange.endDate.toISOString()
             });
 
             $scope.loading = true;
             $scope.$emit('download:wait'); // prevent polling while download request is in progress
+            $scope.$emit('download:add',row); // temporarily add the row
             return $http.post('/dashboard/DashboardData', angular.extend({action:'download'}, row))
                 .then(function(response){
                     var data = response.data;
@@ -43,6 +44,7 @@
                     $scope.$emit('download:poll',row);
                 })
                 ['catch'](function(data){
+                    $scope.$emit('download:remove',row); // remove the bad row
                     return piDialog({header: 'Request Download Error',content: data.msg || 'Study not found'});
                 })
                 .finally(function(){
@@ -60,7 +62,12 @@
         $scope.remove = removeRow;
 
         $rootScope.$on('download:poll', poll);
-        $rootScope.$on('download:poll', function(e,row){console.log(row);$scope.rowCollection.unshift(row);}); // temporarily add row to the stack
+        $rootScope.$on('download:add', function(e,row){$scope.rowCollection.unshift(row);}); // temporarily add row to the stack
+        $rootScope.$on('download:remove', function(e,row){
+            var collection = $scope.rowCollection;
+            var index = collection.indexOf(row);
+            collection.splice(index,1);
+        });
 
         /**
          * The wait and continue API is there to prevent polling while download happens

@@ -46,8 +46,8 @@ router.post('/',function(req,res){
         break;
     case 'download':
         setTimeout(function(){
-            res.json({error:false, msg:'download error'});
-        },4000);
+            res.json({error:true, msg:'download error'});
+        },1000);
         break;
     case 'removeDownload':
         res.json({error:'true', msg:'remove error'});
